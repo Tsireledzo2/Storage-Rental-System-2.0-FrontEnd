@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './Module/app-routing.module';
 import { AppComponent } from './Module/app.component';
 import { CustomerHomepageComponent } from './Components/customer-homepage/customer-homepage.component';
-import { AdminHomepageComponent } from './Components/admin-homepage/admin-homepage.component';
-import { DriverHomepageComponent } from './Components/driver-homepage/driver-homepage.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { StorageUnitComponent } from './Components/storage-unit/storage-unit.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
@@ -16,8 +14,6 @@ import { CustomerDetailsComponent } from './Components/customer-details/customer
   declarations: [
     AppComponent,
     CustomerHomepageComponent,
-    AdminHomepageComponent,
-    DriverHomepageComponent,
     HeaderComponent,
     StorageUnitComponent,
     ContactUsComponent,
