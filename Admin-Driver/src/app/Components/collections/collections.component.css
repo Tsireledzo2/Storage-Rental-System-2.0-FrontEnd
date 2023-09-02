@@ -1,0 +1,43 @@
+.collections {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 60px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    align-items: center;
+    background-color: rgb(34, 80, 107);
+    text-align: center;
+}
+
+.btnTakeCollection {
+    justify-self: center;
+    width: 100%;
+    background-color: rgb(3, 129, 3);
+    padding: 0.6em;
+    border-radius: 4px;
+    margin-top: 3em;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+h1 {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #696969;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #000000;
+  color: #ffff;
+}
