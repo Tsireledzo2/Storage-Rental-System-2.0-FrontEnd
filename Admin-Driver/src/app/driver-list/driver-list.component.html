@@ -1,0 +1,23 @@
+<div class="page-container">
+    <div class="header">
+  
+    </div>
+    <div class="driver-list">
+      <h2>List of Bookings</h2>
+      <ul>
+        <li *ngFor="let driver of drivers">
+          {{ driver }}
+          <button (click)="deleteDriver(driver)" class="delete-button">Delete</button>
+        </li>
+      </ul>
+    </div>
+    <div class="add-driver">
+      <button (click)="addDriver()">Add Driver</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/driver-list">Driver List</a></li>
+      </ul>
+    </nav>
+  </div>
+  
