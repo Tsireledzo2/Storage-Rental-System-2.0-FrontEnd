@@ -7,6 +7,10 @@ import { CustomerHomepageComponent } from './Components/customer-homepage/custom
 import { AdminHomepageComponent } from './Components/admin-homepage/admin-homepage.component';
 import { DriverHomepageComponent } from './Components/driver-homepage/driver-homepage.component';
 import { HeaderComponent } from './Components/header/header.component';
+import { StorageUnitComponent } from './storage-unit/storage-unit.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { HeaderComponent } from './Components/header/header.component';
     CustomerHomepageComponent,
     AdminHomepageComponent,
     DriverHomepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    StorageUnitComponent,
+    ContactUsComponent,
+    AboutUsComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
