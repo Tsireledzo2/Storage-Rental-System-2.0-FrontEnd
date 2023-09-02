@@ -7,6 +7,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { AdminHomeComponent } from './Components/admin-home/admin-home.component';
 import { DriverHomeComponent } from './Components/driver-home/driver-home.component';
 import { CollectionsComponent } from './Components/collections/collections.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { HeaderComponent } from './Components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CollectionsComponent } from './Components/collections/collections.compo
     LoginComponent,
     AdminHomeComponent,
     DriverHomeComponent,
-    CollectionsComponent
+    CollectionsComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

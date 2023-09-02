@@ -1,22 +1,22 @@
 .collections {
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 60px;
-    width: 300px;
+    padding: 80px;
+    width: 500px;
     margin: 0 auto;
     margin-top: 100px;
     align-items: center;
-    background-color: rgb(34, 80, 107);
+    background-color: #3a797e9d;
     text-align: center;
 }
 
 .btnTakeCollection {
     justify-self: center;
     width: 100%;
-    background-color: rgb(3, 129, 3);
+    background-color: #405061;
     padding: 0.6em;
     border-radius: 4px;
-    margin-top: 3em;
+    margin-top: 5em;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -38,6 +38,6 @@ button {
   font-weight: bold;
 }
 button:hover {
-  background-color: #000000;
-  color: #ffff;
+  background-color: #486788;
+  /* color: #ffff; */
 }
