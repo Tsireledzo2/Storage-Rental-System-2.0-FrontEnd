@@ -10,6 +10,9 @@ import { VehicleListComponentComponent } from './Components/vehicle-list-compone
 import { BookingsListComponentComponent } from './Components/bookings-list-component/bookings-list-component.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
+import { CollectionsComponent } from './Components/collections/collections.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { HeaderComponent } from './Components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { DriverListComponent } from './driver-list/driver-list.component';
     VehicleListComponentComponent,
     BookingsListComponentComponent,
     NavbarComponent,
-    DriverListComponent
+    DriverListComponent,
+    CollectionsComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
