@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CollectionsComponent } from './Components/collections/collections.component';
 import { DriverHomeComponent } from './Components/driver-home/driver-home.component';
 import { LoginComponent } from './Components/login/login.component';
+import { VehicleListComponentComponent } from './Components/vehicle-list-component/vehicle-list-component.component';
+import { BookingsListComponentComponent } from './Components/bookings-list-component/bookings-list-component.component';
+import { DriverListComponent } from './driver-list/driver-list.component';
 
 const routes: Routes = [
   {
@@ -16,7 +20,16 @@ const routes: Routes = [
   },
   {
     path: '', redirectTo:'/login', pathMatch:'full'
-  }
+  },
+  {
+    path: 'driver-list', component: DriverListComponent
+  },
+  {
+    path: 'vehicle-list', component: VehicleListComponentComponent
+  },
+  {
+    path: 'bookings-list', component: BookingsListComponentComponent
+  },
 ];
 
 @NgModule({
