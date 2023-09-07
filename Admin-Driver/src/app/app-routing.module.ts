@@ -25,14 +25,6 @@ const routes: Routes = [
   {
     path: 'adminHome', component: AdminHomeComponent
   },
-    path: 'driver-list', component: DriverListComponent
-  },
-  {
-    path: 'vehicle-list', component: VehicleListComponentComponent
-  },
-  {
-    path: 'bookings-list', component: BookingsListComponentComponent
-  },
 ];
 
 @NgModule({
