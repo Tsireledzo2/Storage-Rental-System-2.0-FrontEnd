@@ -11,11 +11,12 @@ Run `ng serve or npm run start` for a dev server. Navigate to `http://localhost:
 
 ## Development commands
 
-Create new component `ng generate component {component-name}` 
+Create new component `ng generate component {component-name}` make sure to create the component in a right folder `Components` to navigate to the folder `cd Customer or Admin-Driver` then `cd src/app/Components/` then here you can use the `command to generate a component`
 Create a service `ng generate service {service-name}`
 Create a model/domain class `ng generate class {class-name}`
 
 ## After pulling 
+`cd Customer or Admin-Driver` then
 Make sure to run `npm i` then `npm run build`, this help with building the packages added by other contributor or developer
 
 
