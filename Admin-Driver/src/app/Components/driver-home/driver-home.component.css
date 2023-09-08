@@ -2,64 +2,20 @@
     background-color: #3a797e80;
     border-radius: 5px;
     box-shadow: 0 0 2000px #3a797e9d;
-    padding: 80px;
-    width: 500px;
+    padding: 100px;
+    width: 800px;
     margin: 0 auto;
     margin-top: 4em;
 }
 .collections {
     margin: 0 0 2em 0;
-    list-style-type: none;
+    list-style:none;
     padding: 0;
     width: 15em;
   }
   
-  .collections li {
-    display: flex;
-  }
-  
-  .collections button {
-    flex: 1;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: 0;
-    border-radius: 4px;
-    display: flex;
-    align-items: stretch;
-    height: 1.8em;
-  }
-  
-  .collections button:hover {
-    color: #098b4a;;
-    background-color: #e6e6e6;
-    left: .1em;
-  }
-  
-  .collections button:active {
-    background-color: #525252;
-    color: #fafafa;
-  }
-  
-  .collections button.selected {
-    background-color: black;
-    color: white;
-  }
-  
-  .collections button.selected:hover {
-    background-color: #505050;
-    color: white;
-  }
-  
-  .collections button.selected:active {
-    background-color: black;
-    color: white;
-  }
-  
   .collections .badge {
-    display: inline-block;
+    display: flex;
     font-size: medium;
     color: white;
     padding: 0.8em 3.7em 0.8em 3.7em;
@@ -71,7 +27,7 @@
     top: -70px;
   }
 
-  .collections .badge:hover {
+  .collections li:hover {
     background-color: #486788;
   }
 
@@ -80,5 +36,28 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     position: relative;
-    top: -70px;
+    top: -90px;
+  }
+
+  .collections li {
+    /* display: inline-block; */
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bolder;
+    color: white;
+    padding: 0.8em 3.7em 0.8em 3.7em;
+    background-color: #405061;
+    line-height: 2em;
+    margin-right: .8em;
+    border-radius: 4px;
+    position: relative;
+    top: -70px; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .collections-container {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 1em; 
   }

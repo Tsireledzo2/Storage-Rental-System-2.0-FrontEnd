@@ -24,9 +24,14 @@ export class LoginComponent implements OnInit{
     
    this.authentication.fetchUserByEmail(this.email, this.password).subscribe(employee => {
     this.employee = employee;
-    this.employeeNumber = this.employee.employeeNumber;
-    console.log(this.employee?.employeeNumber)
-    this.getAdminOrDriver(this.employeeNumber)
+    if (this.employee == null) { 
+      alert("Email/password is incorrect!")
+    } else {
+      this.employeeNumber = this.employee.employeeNumber;
+      console.log(this.employee?.employeeNumber)
+      this.getAdminOrDriver(this.employeeNumber)
+    }
+   
   });
     }
 
