@@ -10,9 +10,9 @@ import { Employee } from '../models/employee';
   styleUrls: ['./driver-list.component.css']
 })
 export class DriverListComponent {
-  //drivers: string[] = ['Wisdom','Ndumiso','Christian','Argus' ];
-
-  driver: Driver[] = [];
+   driver: Driver[] = [];
+   showAddEmployeeForm = false;
+   newEmployee: Employee = new Employee();
 
   constructor(private dataService: DataService) {}
 
@@ -37,8 +37,13 @@ export class DriverListComponent {
       email: 'newemployee@example.com',
       password: 'password123'
     };
-
-    const newDriver: Driver = new Driver('ABC123', 'Driver Job', newEmployee);
+      
+    this.showAddEmployeeForm = true;
+    this.newEmployee = new Employee();
+    
+    const newDriver: Driver =  new Driver(newEmployee)
+    newDriver.licence_number = 'ABC123';
+    newDriver.job_description = 'Driver';
 
     this.dataService.addDriver(newDriver).subscribe(() => {
       this.fetchDrivers();

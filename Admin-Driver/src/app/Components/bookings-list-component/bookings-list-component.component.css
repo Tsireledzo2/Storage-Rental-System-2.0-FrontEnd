@@ -19,3 +19,15 @@ h1 {
   padding: 10px 20px;
   border-radius: 10px;
 }
+
+.booking-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
