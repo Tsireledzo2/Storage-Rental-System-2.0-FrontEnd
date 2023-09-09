@@ -4,13 +4,12 @@
       <h1 class="vehicle-list-label">Vehicle List</h1>
     </div>
     <div class="vehicle-list-container">
-      <div class="vehicle-box" *ngFor="let vehicle of vehicles">
-        {{ vehicle }}
-        <button (click)="deleteVehicle(vehicle)" class="delete-button">X</button>
+      <div class="vehicle-box" *ngFor="let vehicle of vehicle">
+         {{ vehicle.vehicleMake}} {{vehicle.vehicleType.vehicleDescription}} {{vehicle.vehicleName}}
+        <!-- <button (click)="deleteVehicle(vehicle)" class="delete-button">X</button> -->
       </div>
     </div>
     <div class="add-vehicle">
-      <button (click)="addVehicles()" class="add-vehicle-button">Add Vehicle</button>
+      <button (click)="addVehicle()" class="add-vehicle-button">Add Vehicle</button>
     </div>
   </div>
-   
