@@ -1,1 +1,69 @@
-<p>booking works!</p>
+<form>
+  <h2>Booking Form</h2>
+  <input type="text" placeholder="Unit Size" />
+  <input type="text" placeholder="Price" />
+  <input type="text" placeholder="Width" />
+  <input type="text" placeholder="Length" />
+  <div class="Dates">
+    <div id="BookingDate">
+      <label>Booking Date:</label>
+      <input type="date" placeholder="Booking Date" />
+    </div>
+    <div  id="From">
+      <label>From:</label>
+      <input type="date" placeholder="From" />
+    </div>
+    <div id="To">
+      <label>To:</label>
+      <input type="date" placeholder="Too" />
+    </div>
+  </div>
+
+  <div class="spinner">
+    <div>
+      <label>Quantity:</label>
+    </div>
+
+    <button class="decrement" (click)="decrementQuantity()">-</button>
+    <input
+      type="number"
+      id="quantity"
+      min="1"
+      max="10"
+      [(ngModel)]="quantity"
+      name="quantity"
+      readonly
+    />
+    <button class="increment" (click)="incrementQuantity()">+</button>
+  </div>
+  <div class="collection">
+    <label for="collection">Collection:</label>
+    <input
+      type="radio"
+      id="yes"
+      name="collection"
+      value="yes"
+      (change)="toggleExtraFields(true)"
+    />
+    <label for="yes">Yes</label>
+    <input
+      type="radio"
+      id="no"
+      name="collection"
+      value="no"
+      (change)="toggleExtraFields(false)"
+    />
+    <label for="no">No</label>
+  </div>
+
+  <div *ngIf="showExtraFields">
+    <input type="text" placeholder="Address" />
+    <input type="text" placeholder="Zip Code" />
+    <!-- Add more extra fields as needed -->
+  </div>
+  <input type="text" placeholder="Total" />
+  <label>Total:</label>
+  <div>
+    <button class="btn">Complete Booking</button>
+  </div>
+</form>
