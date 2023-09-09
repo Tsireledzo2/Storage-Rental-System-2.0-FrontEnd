@@ -1,0 +1,63 @@
+.DriverHome {
+    background-color: #3a797e80;
+    border-radius: 5px;
+    box-shadow: 0 0 2000px #3a797e9d;
+    padding: 100px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 4em;
+}
+.collections {
+    margin: 0 0 2em 0;
+    list-style:none;
+    padding: 0;
+    width: 15em;
+  }
+  
+  .collections .badge {
+    display: flex;
+    font-size: medium;
+    color: white;
+    padding: 0.8em 3.7em 0.8em 3.7em;
+    background-color: #405061;
+    line-height: 2em;
+    margin-right: .8em;
+    border-radius: 4px;
+    position: relative;
+    top: -70px;
+  }
+
+  .collections li:hover {
+    background-color: #486788;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    top: -90px;
+  }
+
+  .collections li {
+    /* display: inline-block; */
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bolder;
+    color: white;
+    padding: 0.8em 3.7em 0.8em 3.7em;
+    background-color: #405061;
+    line-height: 2em;
+    margin-right: .8em;
+    border-radius: 4px;
+    position: relative;
+    top: -70px; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .collections-container {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 1em; 
+  }
