@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './Module/app-routing.module';
 import { AppComponent } from './Module/app.component';
 import { CustomerHomepageComponent } from './Components/customer-homepage/customer-homepage.component';
@@ -22,7 +22,8 @@ import { CustomerDetailsComponent } from './Components/customer-details/customer
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
