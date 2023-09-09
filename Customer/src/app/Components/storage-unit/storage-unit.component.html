@@ -1,66 +1,80 @@
 <div class="home">
   <header>
     <div class="logo">
-      <img src="../assets/images/stora9.png" alt="Card Image 3" style="max-width: 80%; max-height: 50px;"/> <!-- Increase max-height -->
+      <img
+        src="../assets/images/stora9.png"
+        alt="Card Image 3"
+        style="max-width: 80%; max-height: 50px"
+      />
+      <!-- Increase max-height -->
     </div>
     <nav>
       <ul>
-        <li><a routerLink="/storage"><i class="fas fa-box"></i> Storage Unit</a></li>
-        <li><a routerLink="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
-        <li><a routerLink="/contact"><i class="fas fa-phone"></i> Contact Us</a></li>
-        <li><a routerLink="/"><i class="fas fa-home"></i> Home</a></li>
+        <li>
+          <a routerLink="/storage"><i class="fas fa-box"></i> Storage Unit</a>
+        </li>
+        <li>
+          <a routerLink="/about"><i class="fas fa-info-circle"></i> About Us</a>
+        </li>
+        <li>
+          <a routerLink="/contact"><i class="fas fa-phone"></i> Contact Us</a>
+        </li>
+        <li>
+          <a routerLink="/"><i class="fas fa-home"></i> Home</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-
-
-  
-  <div class="storage-text" style="margin-top: 20px;"> <!-- Add margin-top here -->
+  <div class="storage-text" style="margin-top: 20px">
+    <!-- Add margin-top here -->
     <h2>Explore Our Unit Options</h2>
   </div>
-
-  
-   
-  </div>
-
-  <div class="card-container">
+</div>
+<div>
+  <div class="card-container" >
     <!-- First Card -->
     <div class="first-card">
       <div class="card-content">
-        <img src="../assets/images/stora.jpg" alt="Card Image 3" style="max-width: 100%; max-height: 250px;"/> <!-- Increase max-height -->
+        <img
+          src="../assets/images/stora.jpg"
+          alt="Card Image 3"
+          style="max-width: 100%; max-height: 250px"
+        />
+        <!-- Increase max-height -->
         <h3>Small Storage Unit</h3>
-        <p> <strong>Description</strong> : A 12' x 15'</p> 
-        <p> The unit can handle the furnishings of a two bedroom apartment or small house with larger appliances.  </p>
-        <p> <strong> Price</strong> : R 1 000/month</p>
-        <p> <strong> Size</strong> : Small</p>
+        <p>
+          <strong>Description: {{ storageUnit }}</strong>
+        </p>
+        <p></p>
+        <p><strong> Price:</strong></p>
+        <p><strong> Size:</strong></p>
         <button class="btn">Book</button>
       </div>
     </div>
-  
     <!-- Second Card -->
     <div class=" second-card">
       <div class="card-content">
         <img src="../assets/images/stora2.jpg" alt="Card Image 3" style="max-width: 100%; max-height: 500px;"/>
         <h3>Medium Storage Unit</h3>
-        <p><strong>Description</strong> : A 12' x 20'</p> 
+        <p><strong>Description:</strong> </p> 
          <p>   
-          A 12' x 20' also provides extra width for your car doors and for maneuvering around your items.</p>
-        <p><strong> Price </strong> : R1 500/month</p>
-        <p> <Strong> Size </Strong>: Medium</p>
+         </p>
+        <p><strong> Price:</strong> </p>
+        <p> <Strong> Size: </Strong></p>
         <button class="btn">Book</button>
       </div>
     </div>
-  
+
    <!-- Third Card -->
 <div class="third-card">
   <div class="card-content">
     <img src="../assets/images/stora3.jpg" alt="Card Image 3" style="max-width: 500px; max-height: 500px;"/>
     <h3>Large Storage Unit</h3>
-    <p><strong>Description</strong> : A 12' x 30' </p>
-    <p> The unit is typically used to store RVs, larger boats and vehicles. </p>
-    <p><strong> Price </strong> : R2 000/month</p>
-        <p> <Strong> Size </Strong>: Large</p>
+    <p><strong>Description:</strong> </p>
+    <p>  </p>
+    <p><strong> Price: </strong> </p>
+        <p> <Strong> Size: </Strong></p>
     <button class="btn">Book</button>
   </div>
 </div>
