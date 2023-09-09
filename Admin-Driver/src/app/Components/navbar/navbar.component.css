@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: #040d12;
-  padding: 10px;
+  padding: 5px 10px;
+  height: 50px;
 }
 
 ul {
@@ -30,5 +31,5 @@ a:hover {
 
 .nav-icon {
   width: 150px;
-  height: 80px;
+  height: 60px;
 }

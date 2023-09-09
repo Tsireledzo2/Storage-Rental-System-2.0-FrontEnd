@@ -25,6 +25,7 @@ const routes: Routes = [
   {
     path: 'adminHome', component: AdminHomeComponent
   },
+  {
     path: 'driver-list', component: DriverListComponent
   },
   {
