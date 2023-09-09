@@ -1,5 +1,5 @@
 .page-container {
-  background-color: lightblue;
+  background-color: #144272;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -8,26 +8,50 @@
   min-height: 100vh;
 }
 
+h1 {
+  font-size: px;
+  color: white;
+  background-color: #526d82;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 .header {
   margin-bottom: 20px;
 }
 
 .driver-list {
-  margin-bottom: 20px;
+  background-color: #205295;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 300px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.driver-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 
-li {
-  font-size: 18px;
-  margin-bottom: 10px;
+.driver-box button.delete-button {
+  background-color: #474fc4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 .add-driver button {
-  background-color: #4caf50;
+  background-color: #121212;
   color: white;
   padding: 10px 20px;
   border: none;
