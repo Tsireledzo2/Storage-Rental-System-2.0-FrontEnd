@@ -1,6 +1,11 @@
+<app-header></app-header>
 <form>
-    <h1>{{ loginTitle }}</h1>
-    <input type="text" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <input type="submit" value="Login">
+  <h1>{{ loginTitle }}</h1>
+  <input type="text" placeholder="Email" [(ngModel)]="email" name="email">
+  <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+  <input type="submit" value="Login" (click)="getEmployeeByEmail()">
 </form>
+<!-- <ul *ngIf="employee">
+{{employee.employeeNumber}}
+</ul> -->
+<app-footer></app-footer>

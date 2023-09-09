@@ -11,6 +11,5 @@ export class Employee {
         this.last_name = "";
         this.email = "";
         this.password = "";
-        
-     }
+      }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-customer-homepage',
   templateUrl: './customer-homepage.component.html',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class CustomerHomepageComponent {
 
-  public title: string = "Storage Rental System";
+  
 }

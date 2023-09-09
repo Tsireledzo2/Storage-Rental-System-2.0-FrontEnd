@@ -5,9 +5,9 @@ export class Driver {
     job_description: string;
     employee : Employee;
 
-    constructor(licence_number: string, job_description: string, employee: Employee) {
-        this.licence_number = licence_number;
-        this.job_description = job_description;
-        this.employee = employee;
+    constructor(private employees : Employee) {
+        this.licence_number = "";
+        this.job_description = "";
+        this.employee = employees;
     }
 }
