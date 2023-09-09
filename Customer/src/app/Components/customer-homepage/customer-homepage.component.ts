@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit  } from '@angular/core';
+declare var AOS: any;
+
 
 @Component({
   selector: 'app-customer-homepage',
@@ -7,5 +9,10 @@ import { Component } from '@angular/core';
 })
 export class CustomerHomepageComponent {
 
-  public title: string = "Storage Rental System";
+  ngOnInit() {
+    AOS.init();
+  }
+  
 }
+
+
