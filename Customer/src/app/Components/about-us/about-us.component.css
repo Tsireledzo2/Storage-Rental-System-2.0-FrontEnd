@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   width: auto;
-  height: 80vh;
+  /* height: 80vh; */
   background: linear-gradient(to bottom, #c0dffe, #f0f7fe);
   overflow-x: hidden;
 }
@@ -10,25 +10,25 @@ header {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 0.02px;
   margin: -8px;
   width: auto;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .main2 {
   text-align: center;
-  margin: 80px;
+  margin: 10px;
 }
 
 .container {
   position: relative;
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 150px;
+  max-width: 920px;
+  margin: 10px auto;
+  padding: 120px;
   background-color: #ecf0f3;
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
