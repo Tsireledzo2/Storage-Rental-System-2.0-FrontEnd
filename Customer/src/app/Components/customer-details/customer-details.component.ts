@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './customer-details.component.html',
   styleUrls: ['./customer-details.component.css']
 })
-export class CustomerDetailsComponent {
 
+export class CustomerDetailsComponent {
+  alreadyBooked = false; 
 }
