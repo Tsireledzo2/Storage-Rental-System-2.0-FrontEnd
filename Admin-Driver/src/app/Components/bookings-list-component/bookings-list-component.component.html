@@ -4,7 +4,10 @@
     </div>
       
        <div class="booking-list-container">
-        <div class="booking-box" *ngFor="let Booking of bookings">{{ bookings }}</div>
+        <div class="booking-box" *ngFor="let booking of booking">
+          Booking Number: {{ booking.bookingNumber}} &nbsp;Price: R{{ booking.totalAmount }}.00
+
+        </div>
 
   </div>
  

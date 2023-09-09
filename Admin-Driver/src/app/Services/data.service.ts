@@ -3,12 +3,12 @@ import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Driver } from '../models/driver';
 import { Vehicle } from '../models/vehicle';
-
-
+import { Booking } from '../models/booking';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
   private baseUrl = 'http://localhost:8080'; // Replace with your API URL
 
@@ -33,4 +33,8 @@ deleteDriver(driverId: number): Observable<any> {
 addVehicle(driver: Vehicle): Observable<Vehicle> {
   return this.http.post<Vehicle>(`${this.baseUrl}/driver/createDriver`, driver);
 }
+
+getBookings(): Observable<Booking[]> {
+  return this.http.get<Booking[]>(`${this.baseUrl}/booking/getAll`);
 }
+} 
