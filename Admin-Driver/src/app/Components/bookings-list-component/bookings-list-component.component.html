@@ -2,10 +2,9 @@
     <div class="header">
       <h1>Lists of Bookings</h1>
     </div>
-      <ul>
-        <li *ngFor="let Booking of bookings">{{ bookings }}</li>
-      </ul>
-   
+      
+       <div class="booking-list-container">
+        <div class="booking-box" *ngFor="let Booking of bookings">{{ bookings }}</div>
 
   </div>
-  
+ 
