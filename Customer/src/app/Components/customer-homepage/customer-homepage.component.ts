@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit  } from '@angular/core';
+declare var AOS: any;
 
 
 @Component({
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
 })
 export class CustomerHomepageComponent {
 
+  ngOnInit() {
+    AOS.init();
+  }
   
 }
+
+
