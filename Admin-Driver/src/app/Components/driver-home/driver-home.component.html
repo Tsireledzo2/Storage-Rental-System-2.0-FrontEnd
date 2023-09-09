@@ -1,14 +1,12 @@
 <app-header [title]="Drivertitle"></app-header>
 <div class="DriverHome">
   <h2>Collections</h2>
-  <ul class="collections">
-      <ul class="collections">
-          <li >
-              <a routerLink="/collection">
-              <span class="badge">Collectin 1</span> 
-            </a>
-          </li>
-        </ul>
-  </ul>
+  <div class="collections-container">
+    <ul class="collections" *ngFor="let col of booking">
+      <li routerLink="/collection">
+        {{ col.bookingNumber }}
+      </li>
+    </ul>
+  </div>
 </div>
 <app-footer></app-footer>
