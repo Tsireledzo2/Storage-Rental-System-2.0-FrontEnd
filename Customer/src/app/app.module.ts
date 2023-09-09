@@ -10,6 +10,7 @@ import { StorageUnitComponent } from './Components/storage-unit/storage-unit.com
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
+import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { BookingComponent } from './Components/booking/booking.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
