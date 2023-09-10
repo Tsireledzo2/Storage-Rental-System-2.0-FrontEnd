@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ViewEmailComponent } from '../Components/view-email/view-email.component';
+import { ViewEmailComponent } from '../Components/viewEmail/view-email.component';
 
 const routes: Routes = [
   {
-    path: 'view-email', component: ViewEmailComponent ,
+    path: 'viewEmail', component: ViewEmailComponent
 
-  }
+  },
 ];
 
 @NgModule({
