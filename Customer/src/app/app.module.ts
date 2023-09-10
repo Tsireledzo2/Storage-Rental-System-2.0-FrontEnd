@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,12 @@ import { AvailableStorageComponent } from './Components/available-storage/availa
     BrowserModule,
     HttpClientModule, // Include HttpClientModule in the imports array
     AppRoutingModule,
+
+    FormsModule,
+    HttpClientModule,
+ 
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
