@@ -1,0 +1,70 @@
+.page-container {
+  background-color: #144272;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.vehicle-list-label {
+  font-size: px;
+  color: white;
+  background-color: #526d82;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.vehicle-list-container {
+  background-color: #205295;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 300px;
+}
+
+.vehicle-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: lightblue;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.vehicle-box button.delete-button {
+  background-color: #474fc4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.add-vehicle-button {
+  background-color: #121212;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.add-vehicle-button:hover {
+  background-color: #9db2bf;
+}
+
+.delete-button:hover {
+  background-color: #526d82;
+}

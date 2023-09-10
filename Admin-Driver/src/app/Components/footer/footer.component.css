@@ -1,0 +1,28 @@
+footer{
+    background-color: rgba(181, 181, 181, 0.301);
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    border-radius: 10px;
+    height: 4em;
+    align-items: center;
+    text-align: center;
+    padding: 0em 0em 0em 0em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.footer {
+    margin-top: 2em;
+}
+
+.companyNameFooter {
+    justify-content: start;
+    float: left;
+    margin-left: 0.5em;
+}
+
+.copyrights {
+   margin-right: 7.5em;
+   text-align: center;
+}
