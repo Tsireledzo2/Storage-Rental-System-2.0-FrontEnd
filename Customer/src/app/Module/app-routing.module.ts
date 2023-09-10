@@ -9,6 +9,7 @@ import { BookingComponent } from '../Components/booking/booking.component';
 import { CustomerHomepageComponent } from '../Components/customer-homepage/customer-homepage.component';
 import { AvailableStorageComponent } from '../Components/available-storage/available-storage.component';
 import { CustomerDetailsComponent } from '../Components/customer-details/customer-details.component';
+import { InvoiceEmailComponent } from '../Components/invoice-email/invoice-email.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,9 @@ const routes: Routes = [
   },
   {
     path: 'customerDetails', component: CustomerDetailsComponent
+  },
+  {
+    path: 'view-email', component: InvoiceEmailComponent
   }
 ];
 
