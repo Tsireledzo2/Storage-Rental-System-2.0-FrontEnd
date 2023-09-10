@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { ViewEmailComponent } from '../Components/view-email/view-email.component';
+
+const routes: Routes = [
+  {
+    path: 'view-email', component: ViewEmailComponent ,
+
+
 import { StorageUnitComponent } from '../Components/storage-unit/storage-unit.component';
 import { AboutUsComponent } from '../Components/about-us/about-us.component';
 import { ContactUsComponent } from '../Components/contact-us/contact-us.component';
@@ -24,6 +32,7 @@ const routes: Routes = [
   },
   {
     path:'',redirectTo:'/CustomerHome', pathMatch:'full'
+
   }
 ];
 
