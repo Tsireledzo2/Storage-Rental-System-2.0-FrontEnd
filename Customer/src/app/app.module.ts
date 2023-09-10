@@ -13,6 +13,7 @@ import { CustomerDetailsComponent } from './Components/customer-details/customer
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +23,15 @@ import { BookingComponent } from './Components/booking/booking.component';
     ContactUsComponent,
     AboutUsComponent,
     CustomerDetailsComponent,
-    BookingComponent
+    BookingComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

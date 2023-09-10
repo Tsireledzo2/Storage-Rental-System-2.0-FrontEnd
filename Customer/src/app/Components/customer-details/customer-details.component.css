@@ -53,6 +53,12 @@ textarea
   font-size: 16px;
 }
 
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 input[type="checkbox"] {
   margin-right: 5px;
 }
@@ -78,17 +84,14 @@ button[type="submit"]:hover {
   grid-column: span 2;
 
 }
-.container img {
-  height:80px;
-  width:150px;
 
-}
-
-img {
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
 }
-
