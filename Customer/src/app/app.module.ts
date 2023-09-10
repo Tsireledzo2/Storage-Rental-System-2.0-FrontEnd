@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './Module/app-routing.module';
 import { AppComponent } from './Module/app.component';
 import { CustomerHomepageComponent } from './Components/customer-homepage/customer-homepage.component';
@@ -39,6 +40,7 @@ import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    RouterModule
  
 
 
