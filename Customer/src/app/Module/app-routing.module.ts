@@ -5,6 +5,8 @@ import { AboutUsComponent } from '../Components/about-us/about-us.component';
 import { ContactUsComponent } from '../Components/contact-us/contact-us.component';
 import { BookingComponent } from '../Components/booking/booking.component';
 import { CustomerHomepageComponent } from '../Components/customer-homepage/customer-homepage.component';
+import { AvailableStorageComponent } from '../Components/available-storage/available-storage.component';
+import { CustomerDetailsComponent } from '../Components/customer-details/customer-details.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,12 @@ const routes: Routes = [
   },
   {
     path:'',redirectTo:'/CustomerHome', pathMatch:'full'
+  },
+  {
+    path: 'availableRooms', component: AvailableStorageComponent 
+  },
+  {
+    path: 'customerDetails', component: CustomerDetailsComponent
   }
 ];
 

@@ -12,6 +12,7 @@ import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
+import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BookingComponent } from './Components/booking/booking.component';
     ContactUsComponent,
     AboutUsComponent,
     CustomerDetailsComponent,
-    BookingComponent
+    BookingComponent,
+    AvailableStorageComponent
   ],
   imports: [
     BrowserModule,
