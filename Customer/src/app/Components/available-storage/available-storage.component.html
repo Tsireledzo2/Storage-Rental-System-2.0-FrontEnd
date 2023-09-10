@@ -1,0 +1,8 @@
+<div>
+    <!-- <h1>Available Storage Units</h1> -->
+    <ul>
+        <li *ngIf="rooms">
+            <span routerLink="/customerDetails">Size: {{rooms.unitSizeDescription}} = {{rooms.storageUnitType.unitSize}} m^2</span>
+        </li>
+    </ul>
+</div>

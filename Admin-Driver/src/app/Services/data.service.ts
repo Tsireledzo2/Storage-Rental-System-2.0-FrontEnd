@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Driver } from '../models/driver';
 import { Vehicle } from '../models/vehicle';
 import { Booking } from '../models/booking';
+import { Employee } from '../models/employee';
 
 @Injectable({
   providedIn: 'root'
@@ -30,11 +31,15 @@ deleteDriver(driverId: number): Observable<any> {
   return this.http.delete(`${this.baseUrl}/driver/deleteDriver/${driverId}`);
 }
 
-addVehicle(driver: Vehicle): Observable<Vehicle> {
-  return this.http.post<Vehicle>(`${this.baseUrl}/driver/createDriver`, driver);
+addVehicle(vehicle: Vehicle): Observable<Vehicle> {
+  return this.http.post<Vehicle>(`${this.baseUrl}/driver/createVehicle`, vehicle);
 }
 
 getBookings(): Observable<Booking[]> {
   return this.http.get<Booking[]>(`${this.baseUrl}/booking/getAll`);
+}
+
+addEmployee(employee: Employee): Observable<Employee>{
+  return this.http.post<Employee>(`${this.baseUrl}/createEmployee`, employee);
 }
 } 

@@ -44,12 +44,12 @@
         <!-- Increase max-height -->
         <h3>Small Storage Unit</h3>
         <p>
-          <strong>Description: {{ storageUnit }}</strong>
+          <strong>Description: {{ description }}</strong>
         </p>
         <p></p>
-        <p><strong> Price:</strong></p>
-        <p><strong> Size:</strong></p>
-        <button class="btn">Book</button>
+        <p><strong> Price: R{{price}}</strong></p>
+        <p><strong> Size: {{size}}</strong></p>
+        <button class="btn" (click)="fetchRooms()">Book</button>
       </div>
     </div>
     <!-- Second Card -->
@@ -62,7 +62,7 @@
          </p>
         <p><strong> Price:</strong> </p>
         <p> <Strong> Size: </Strong></p>
-        <button class="btn">Book</button>
+        <button class="btn" (click)="fetchMRooms()">Book</button>
       </div>
     </div>
 
@@ -75,6 +75,11 @@
     <p>  </p>
     <p><strong> Price: </strong> </p>
         <p> <Strong> Size: </Strong></p>
-    <button class="btn">Book</button>
+    <button class="btn" (click)="fetchLRooms()">Book</button>
   </div>
 </div>
+<div class="head">
+<h2>Available Storage Units</h2>
+</div>
+  <app-available-storage *ngFor="let romm of storageUnitSmall" [rooms]="romm"></app-available-storage>
+

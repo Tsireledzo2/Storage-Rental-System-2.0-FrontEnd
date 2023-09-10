@@ -11,9 +11,14 @@ import { StorageUnitComponent } from './Components/storage-unit/storage-unit.com
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
-import { ViewEmailComponent } from './Components/viewEmail/view-email.component';
-import { BookingComponent } from './Components/booking/booking.component';
 
+import { ViewEmailComponent } from './Components/viewEmail/view-email.component';
+
+import { ViewEmailComponent } from './Components/view-email/view-email.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { BookingComponent } from './Components/booking/booking.component';
+import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,13 @@ import { BookingComponent } from './Components/booking/booking.component';
     AboutUsComponent,
     CustomerDetailsComponent,
 
+
     ViewEmailComponent,
+
+    BookingComponent,
+    AvailableStorageComponent,
+    ViewEmailComponent
+
   ],
   imports: [
     BrowserModule,
