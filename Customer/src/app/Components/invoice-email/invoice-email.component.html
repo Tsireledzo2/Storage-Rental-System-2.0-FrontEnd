@@ -1,15 +1,19 @@
 <div class="invoice-list">
-    <h2>Invoices</h2>
-    <ul>
-      <li *ngFor="let invoice of invoices" class="invoice-item">
-        <div class="invoice-info">
-          <p><strong>Invoice ID:</strong> {{ invoice.id }}</p>
-          <p><strong>Customer:</strong> {{ invoice.customerName }}</p>
-          <p><strong>Invoice Date:</strong> {{ invoice.invoiceDate }}</p>
-          <p><strong>Amount:</strong> ${{ invoice.amount }}</p>
-          <!-- Add more fields as needed -->
+  <h2>Invoices</h2>
+  <ul>
+    <li *ngFor="let invoice of invoices" class="invoice-item">
+      <div class="invoice-info">
+        <p><strong>Invoice ID:</strong> {{ invoice.InvoiceNumber }}</p>
+        <p><strong>Customer:</strong> {{ invoice.customerName }}</p>
+        <p><strong>Invoice Date:</strong> {{ invoice.invoiceDate }}</p>
+        <p><strong>Amount:</strong> ${{ invoice.amount }}</p>
+        <div class="email-section">
+          <label for="recipientEmail">Recipient's Email Address:</label>
+          <input type="email" id="recipientEmail" [(ngModel)]="recipientEmail" />
+          <button class="send-email-btn" (click)="sendInvoiceByEmail()">Send Email</button>
         </div>
-      </li>
-    </ul>
-  </div>
-  
+        <!-- Add more fields as needed -->
+      </div>
+    </li>
+  </ul>
+</div>
