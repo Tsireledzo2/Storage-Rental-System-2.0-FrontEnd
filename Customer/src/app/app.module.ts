@@ -9,6 +9,7 @@ import { StorageUnitComponent } from './Components/storage-unit/storage-unit.com
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
+import { ViewEmailComponent } from './Components/view-email/view-email.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { CustomerDetailsComponent } from './Components/customer-details/customer
     StorageUnitComponent,
     ContactUsComponent,
     AboutUsComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    ViewEmailComponent,
+    
   ],
   imports: [
     BrowserModule,
