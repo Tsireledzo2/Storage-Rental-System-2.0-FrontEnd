@@ -1,22 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { ViewEmailComponent } from '../Components/viewEmail/view-email.component';
-
-
-import { ViewEmailComponent } from '../Components/view-email/view-email.component';
-
-
-
-const routes: Routes = [
-  {
-    path: 'viewEmail', component: ViewEmailComponent
-
-
-  },
-
-
-
 import { StorageUnitComponent } from '../Components/storage-unit/storage-unit.component';
 import { AboutUsComponent } from '../Components/about-us/about-us.component';
 import { ContactUsComponent } from '../Components/contact-us/contact-us.component';
@@ -25,6 +8,7 @@ import { CustomerHomepageComponent } from '../Components/customer-homepage/custo
 import { AvailableStorageComponent } from '../Components/available-storage/available-storage.component';
 import { CustomerDetailsComponent } from '../Components/customer-details/customer-details.component';
 import { InvoiceEmailComponent } from '../Components/invoice-email/invoice-email.component';
+
 
 const routes: Routes = [
   {
