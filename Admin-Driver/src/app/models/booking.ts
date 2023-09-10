@@ -1,5 +1,6 @@
 export class Booking {
     bookingNumber: string;
+
     bookingDate: Date;
     startDate: Date;
     endDate: Date;

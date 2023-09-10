@@ -73,7 +73,7 @@ a {
   margin-bottom: 20px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  height: 30em;
+  height: 28em;
   /* margin-bottom: 100pt; */
 }
 
@@ -86,7 +86,7 @@ a {
   margin-bottom: 20px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  height: 35em;
+  height: 33em;
   /* margin-bottom: 100pt; */
 
 }
@@ -100,7 +100,7 @@ a {
   margin-bottom: 20px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  height: 40em;
+  height: 37em;
 }
 
 .card:hover {
@@ -143,6 +143,14 @@ a {
 
 strong {
   font-weight: bold; /* Make the word "Description" bold */
+}
+
+.head {
+  /* display: flex; */
+  text-align: center;
+  border: 3px solid black;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 

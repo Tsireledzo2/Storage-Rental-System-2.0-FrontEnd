@@ -1,21 +1,21 @@
-<form>
+<div class="container" id="BookingForm">
+<form #addForm="ngForm" (ngSubmit)="onAddBooking(addForm)">
   <h2>Booking Form</h2>
   <input type="text" placeholder="Unit Size" />
-  <input type="text" placeholder="Price" />
   <input type="text" placeholder="Width" />
   <input type="text" placeholder="Length" />
   <div class="Dates">
     <div id="BookingDate">
       <label>Booking Date:</label>
-      <input type="date" placeholder="Booking Date" />
+      <input ngModel name="bookingDate" type="date" placeholder="Booking Date" />
     </div>
     <div  id="From">
       <label>From:</label>
-      <input type="date" placeholder="From" />
+      <input ngModel name="startDate" type="date" placeholder="From" />
     </div>
     <div id="To">
       <label>To:</label>
-      <input type="date" placeholder="Too" />
+      <input ngModel name="endDate" type="date" placeholder="Too" />
     </div>
   </div>
 
@@ -24,7 +24,7 @@
       <label>Quantity:</label>
     </div>
 
-    <button class="decrement" (click)="decrementQuantity()">-</button>
+    <button type="button" class="decrement" (click)="decrementQuantity()">-</button>
     <input
       type="number"
       id="quantity"
@@ -34,36 +34,53 @@
       name="quantity"
       readonly
     />
-    <button class="increment" (click)="incrementQuantity()">+</button>
+    <button type="button" class="increment" (click)="incrementQuantity()">+</button>
   </div>
   <div class="collection">
     <label for="collection">Collection:</label>
     <input
+    ngModel
+    name="collection"
       type="radio"
       id="yes"
       name="collection"
-      value="yes"
+      value="true"
       (change)="toggleExtraFields(true)"
     />
     <label for="yes">Yes</label>
     <input
+    ngModel
+    name="collection"
       type="radio"
       id="no"
       name="collection"
-      value="no"
+      value="false"
       (change)="toggleExtraFields(false)"
     />
     <label for="no">No</label>
   </div>
 
   <div *ngIf="showExtraFields">
-    <input type="text" placeholder="Address" />
+    <input type="text" placeholder="Street Number" />
+    <input type="text" placeholder="Street Name" />
+    <input type="text" placeholder="State" />
     <input type="text" placeholder="Zip Code" />
     <!-- Add more extra fields as needed -->
   </div>
-  <input type="text" placeholder="Total" />
+  <input  ngModel name="totalAmount" type="text" placeholder="Total" />
   <label>Total:</label>
   <div>
-    <button class="btn">Complete Booking</button>
+    <button  type="submit" class="btn" id="submit-button">Complete Booking</button>
   </div>
 </form>
+  <!-- [disabled]="addForm.invalid" -->
+</form>
+
+<div *ngFor="let booking of booking">
+  <div>
+    {{booking.bookingNumber}}
+  </div>
+
+</div>
+
+</div>

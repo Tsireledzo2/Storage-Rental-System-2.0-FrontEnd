@@ -13,6 +13,7 @@ export class VehicleListComponentComponent {
 
   vehicle: Vehicle[] = [];
   
+  
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
