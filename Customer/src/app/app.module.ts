@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 import { AppRoutingModule } from './Module/app-routing.module';
 import { AppComponent } from './Module/app.component';
@@ -10,8 +11,12 @@ import { StorageUnitComponent } from './Components/storage-unit/storage-unit.com
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
+
+import { ViewEmailComponent } from './Components/viewEmail/view-email.component';
+
 import { ViewEmailComponent } from './Components/view-email/view-email.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
 
@@ -24,17 +29,21 @@ import { AvailableStorageComponent } from './Components/available-storage/availa
     ContactUsComponent,
     AboutUsComponent,
     CustomerDetailsComponent,
+
+
+    ViewEmailComponent,
+
     BookingComponent,
     AvailableStorageComponent,
     ViewEmailComponent
+
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, // Include HttpClientModule in the imports array
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
