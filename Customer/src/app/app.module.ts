@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 import { AppRoutingModule } from './Module/app-routing.module';
@@ -11,6 +12,8 @@ import { ContactUsComponent } from './Components/contact-us/contact-us.component
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { CustomerDetailsComponent } from './Components/customer-details/customer-details.component';
 import { ViewEmailComponent } from './Components/viewEmail/view-email.component';
+import { BookingComponent } from './Components/booking/booking.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { ViewEmailComponent } from './Components/viewEmail/view-email.component'
     ContactUsComponent,
     AboutUsComponent,
     CustomerDetailsComponent,
+
     ViewEmailComponent,
   ],
   imports: [
