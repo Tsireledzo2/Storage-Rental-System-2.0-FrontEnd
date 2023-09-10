@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from '../Services/data.service';
 import { Driver } from '../models/driver';
 import { Employee } from '../models/employee';
@@ -11,9 +11,16 @@ import { Employee } from '../models/employee';
 })
 export class DriverListComponent {
    driver: Driver[] = [];
+   
    showAddEmployeeForm = false;
    newEmployee: Employee = new Employee();
-
+   newDriver : Driver = new Driver(this.newEmployee);
+   
+  //  @ViewChild('firstNameInput') firstNameInput: ElementRef;
+  //  clearInputFields() {
+  //   this.firstNameInput.nativeElement.value = '';
+  //  }
+   
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -28,25 +35,20 @@ export class DriverListComponent {
       this.driver = data;
     });
   }
+  createDriver(){
+    this.dataService.addEmployee(this.newEmployee).subscribe(response => {
+      console.log(response)
+      this.addDriver()
+      this.fetchDrivers()
+    }
+      );
+  }
 
   addDriver() {
-    const newEmployee: Employee = {
-      employeeNumber: '123',
-      first_name: 'New Employee First Name',
-      last_name: 'New Employee Last Name',
-      email: 'newemployee@example.com',
-      password: 'password123'
-    };
+    this.newDriver.job_description = "Driver";
+    this.dataService.addDriver(this.newDriver).subscribe(response => {
+      console.log(response)
       
-    this.showAddEmployeeForm = true;
-    this.newEmployee = new Employee();
-    
-    const newDriver: Driver =  new Driver(newEmployee)
-    newDriver.licence_number = 'ABC123';
-    newDriver.job_description = 'Driver';
-
-    this.dataService.addDriver(newDriver).subscribe(() => {
-      this.fetchDrivers();
     });
 
 //  deleteDriver(driver: string) {
