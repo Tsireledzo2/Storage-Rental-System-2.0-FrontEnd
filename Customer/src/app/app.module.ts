@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './Module/app-routing.module';
 import { AppComponent } from './Module/app.component';
@@ -34,6 +35,7 @@ import { AvailableStorageComponent } from './Components/available-storage/availa
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    RouterModule
  
   ],
   providers: [],

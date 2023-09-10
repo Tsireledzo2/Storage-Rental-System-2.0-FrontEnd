@@ -1,9 +1,10 @@
 <div class="container" id="BookingForm">
 <form #addForm="ngForm" (ngSubmit)="onAddBooking(addForm)">
   <h2>Booking Form</h2>
-  <input type="text" placeholder="Unit Size" />
-  <input type="text" placeholder="Width" />
-  <input type="text" placeholder="Length" />
+  <span>Unit Size: {{unitSize}}</span><br><br><br>
+  <span>Width :{{width}}</span><br><br><br>
+  <span>Length :{{lenth}}</span><br><br><br>
+  <span>Price :{{price}}</span><br><br><br><br>
   <div class="Dates">
     <div id="BookingDate">
       <label>Booking Date:</label>
@@ -67,14 +68,14 @@
     <input type="text" placeholder="Zip Code" />
     <!-- Add more extra fields as needed -->
   </div>
-  <input  ngModel name="totalAmount" type="text" placeholder="Total" />
+  <input  ngModel name="totalAmount" type="text" placeholder="Total" [(ngModel)]="price"/>
   <label>Total:</label>
   <div>
     <button  type="submit" class="btn" id="submit-button">Complete Booking</button>
   </div>
 </form>
   <!-- [disabled]="addForm.invalid" -->
-</form>
+
 
 <div *ngFor="let booking of booking">
   <div>
