@@ -61,5 +61,27 @@ h1 {
 }
 
 .add-driver button:hover {
-  background-color: #45a049;
+  background-color: #1559a7;
+}
+
+.label-and-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.label-and-input label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.label-and-input input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: start;
+  width: 30em;
 }
