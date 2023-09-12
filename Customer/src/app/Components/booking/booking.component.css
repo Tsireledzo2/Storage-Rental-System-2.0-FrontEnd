@@ -101,7 +101,7 @@ input[type="text"] {
 
 span {
   margin-left: 1em;
-  background-color: aqua;
+  background-color: rgb(41, 117, 153);
   padding: 1em;
   border-radius: 4px;
 }

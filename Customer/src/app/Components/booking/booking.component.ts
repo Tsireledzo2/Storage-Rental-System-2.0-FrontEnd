@@ -8,6 +8,7 @@ import { StorageUnit } from 'src/app/models/storage-unit';
 import { BookServiceService } from 'src/app/services/book-service.service';
 import { StorageUnitService } from 'src/app/services/storage-unit.service';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
+import { Router } from '@angular/router';
 
 
 
@@ -46,7 +47,7 @@ price : Number = 0;
 email: string = '';
 storageid: string = '';
 
- constructor(private bookingService: BookServiceService,private storageService:StorageUnitService) {}
+ constructor(private bookingService: BookServiceService,private storageService:StorageUnitService,private route:Router) {}
 
  ngOnInit() {
    this.getBooking();
@@ -109,6 +110,8 @@ storageid: string = '';
   this.bookingService.createBooking(addForm.value).subscribe(
     (response: Booking) => {
       console.log(response);
+      alert("Booking was successful")
+      this.route.navigateByUrl("/");
       // this.getBooking();
     },
     (error: HttpErrorResponse) => {

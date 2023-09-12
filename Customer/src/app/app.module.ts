@@ -13,7 +13,9 @@ import { CustomerDetailsComponent } from './Components/customer-details/customer
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
-import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.component'; // Import your component here
+import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.component';
+import { CustomerLoginComponent } from './Components/customer-login/customer-login.component';
+import { CustomerResgistrationComponent } from './Components/customer-resgistration/customer-resgistration.component'; // Import your component here
 
 
 
@@ -30,6 +32,8 @@ import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.
     BookingComponent,
     AvailableStorageComponent,
     InvoiceEmailComponent,
+    CustomerLoginComponent,
+    CustomerResgistrationComponent,
     
     
 

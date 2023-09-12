@@ -48,6 +48,7 @@ export class DriverListComponent {
     this.newDriver.job_description = "Driver";
     this.dataService.addDriver(this.newDriver).subscribe(response => {
       console.log(response)
+      this.fetchDrivers()
       
     });
 
