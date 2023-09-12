@@ -15,10 +15,6 @@ import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
 import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.component';
 import { CustomerLoginComponent } from './Components/customer-login/customer-login.component';
-import { CustomerResgistrationComponent } from './Components/customer-resgistration/customer-resgistration.component'; // Import your component here
-
-
-
 
 @NgModule({
   declarations: [
@@ -33,21 +29,14 @@ import { CustomerResgistrationComponent } from './Components/customer-resgistrat
     AvailableStorageComponent,
     InvoiceEmailComponent,
     CustomerLoginComponent,
-    CustomerResgistrationComponent,
-    
-    
-
   ],
   imports: [
     BrowserModule,
-    HttpClientModule, // Include HttpClientModule in the imports array
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
- 
-
-
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

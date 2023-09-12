@@ -5,15 +5,13 @@ import { StorageUnitService } from 'src/app/services/storage-unit.service';
 @Component({
   selector: 'app-available-storage',
   templateUrl: './available-storage.component.html',
-  styleUrls: ['./available-storage.component.css']
+  styleUrls: ['./available-storage.component.css'],
 })
-export class AvailableStorageComponent implements OnInit{
+export class AvailableStorageComponent implements OnInit {
   @Input()
   rooms?: StorageUnit;
 
-  constructor(private storageService: StorageUnitService){
-
-  }
+  constructor(private storageService: StorageUnitService) {}
   ngOnInit(): void {
     //this.sendDataToBooking();
   }
@@ -23,5 +21,4 @@ export class AvailableStorageComponent implements OnInit{
     console.log(StorageUnitId);
     this.storageService.setData(StorageUnitId);
   }
-
 }
