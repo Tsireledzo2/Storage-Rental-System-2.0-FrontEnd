@@ -15,23 +15,21 @@ export class DriverListComponent {
    showAddEmployeeForm = false;
    newEmployee: Employee = new Employee();
    newDriver : Driver = new Driver(this.newEmployee);
-   
-  //  @ViewChild('firstNameInput') firstNameInput: ElementRef;
-  //  clearInputFields() {
-  //   this.firstNameInput.nativeElement.value = '';
-  //  }
-   
+  
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getDrivers().subscribe(driver => {
-      this.driver = driver
-      console.log(this.driver);
-    });
+    console.log("running");
+    this.fetchDrivers();
+    // this.dataService.getDrivers().subscribe(driver => {
+    //   this.driver = driver
+    //   console.log(this.driver);
+    // });
   }
 
   fetchDrivers() {
     this.dataService.getDrivers().subscribe((data) => {
+      console.log("driver fetched")
       this.driver = data;
     });
   }

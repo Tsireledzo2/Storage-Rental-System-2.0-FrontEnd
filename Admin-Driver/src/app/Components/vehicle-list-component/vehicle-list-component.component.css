@@ -1,71 +1,91 @@
+/* Apply styles to the page container */
 .page-container {
-  background-color: #144272;
-  padding: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  min-height: 100vh;
+  height: 100vh; /* Center content vertically on the page */
+  background-color: #f0f0f0; /* Background color for the entire page */
+  font-family: Arial, sans-serif; /* Choose your preferred font */
 }
 
+/* Apply styles to the header */
 .header {
-  margin-bottom: 20px;
+  color: black;
 }
-
 .vehicle-list-label {
-  font-size: px;
-  color: white;
-  background-color: #526d82;
-  padding: 10px 20px;
-  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 30px; /* Adjust the gap between the two columns */
+  background-color: #fff; /* Background color for the content container */
+  border-radius: 5px;
+  padding: 20px;
 }
 
+/* Apply styles to the vehicle list container (left column) */
 .vehicle-list-container {
-  background-color: #205295;
+  background-color: #f2f2f2; /* Background color for the list container */
   padding: 20px;
   border-radius: 5px;
-  width: 50%;
-  margin: 0 auto;
-  min-height: 300px;
-  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  float: left; /* Float the container to the left */
+  width: 30%;
 }
 
+/* Apply styles to the vehicle boxes */
 .vehicle-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px;
-  margin: 10px 0;
-  background-color: lightblue;
-  border-radius: 10px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
 }
 
-.vehicle-box button.delete-button {
-  background-color: #474fc4;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+/* Apply styles to form labels */
+.label-and-input label {
+  margin-bottom: 5px;
 }
 
+/* Apply styles to form inputs */
+.label-and-input input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+/* Apply styles to the "Add Vehicle" button */
 .add-vehicle-button {
-  background-color: #121212;
-  color: white;
-  border: none;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
   padding: 10px 20px;
+  border: none;
   cursor: pointer;
-  font-size: 18px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
+/* Apply hover styles to the button */
 .add-vehicle-button:hover {
-  background-color: #9db2bf;
+  background-color: #0056b3; /* Button background color on hover */
 }
 
+/* Apply styles for the delete button if you decide to uncomment it */
+.delete-button {
+  background-color: #ff0000; /* Delete button background color */
+  color: #fff; /* Delete button text color */
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+/* Apply hover styles to the delete button */
 .delete-button:hover {
-  background-color: #526d82;
+  background-color: #d40000; /* Delete button background color on hover */
 }
