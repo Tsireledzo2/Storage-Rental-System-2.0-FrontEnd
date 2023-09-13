@@ -19,17 +19,12 @@ export class DriverListComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    console.log("running");
     this.fetchDrivers();
-    // this.dataService.getDrivers().subscribe(driver => {
-    //   this.driver = driver
-    //   console.log(this.driver);
-    // });
+    
   }
 
   fetchDrivers() {
     this.dataService.getDrivers().subscribe((data) => {
-      console.log("driver fetched")
       this.driver = data;
     });
   }

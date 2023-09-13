@@ -1,0 +1,142 @@
+/* contact-us.component.css */
+.contact-us {
+  background-color: #f7f7f7;
+  padding: 60px 0;
+}
+.contact-us nav {
+  background-color: #333; /* Background color for the navigation bar */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's on top of other content */
+  text-align: center;
+  
+}
+
+.contact-us nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center align navigation items */
+  text-align: right;
+  
+}
+
+.contact-us nav li {
+  display: inline;
+  margin-right: 30px; /* Spacing between navigation items */
+}
+
+.contact-us nav a {
+  text-decoration: none;
+  color: #fff; /* Text color for navigation links */
+  font-weight: bold;
+  
+}
+
+.contact-us nav a:hover {
+  color: #ff6600; /* Text color for navigation links on hover */
+}
+
+
+.contact-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-us img{
+  width:35%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  width:105%;
+
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+

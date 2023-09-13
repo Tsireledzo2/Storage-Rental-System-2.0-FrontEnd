@@ -1,8 +1,41 @@
-.storage-unit-header{
-    min-height: 42px;
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-weight: 900;
-    padding: 0em 0em 0em 0.5em;
-    background-color: brown;
-}
+    background-color: #080808;
+    /* Dark blue-gray background color */
+    color: #fff;
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    height: 20px;
+    /* Adjust the height as needed */
+  }
+  
+  .logo img {
+    height: 40px;
+    /* Adjust the logo size as needed */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    /* Adjust the right margin as needed */
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #f8f2f2;
+    font-weight: bold;
+  }
+  
+  /* Navigation icons */
+  i {
+    margin-right: 5px;
+  }

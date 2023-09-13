@@ -98,3 +98,10 @@ input[type="text"] {
 #BookingDate {
   grid-column: 1 / span 2;
 }
+
+span {
+  margin-left: 1em;
+  background-color: rgb(41, 117, 153);
+  padding: 1em;
+  border-radius: 4px;
+}

@@ -1,1 +1,61 @@
-<p>storage-unit works!</p>
+<div class="home">
+  
+    <app-header></app-header>
+
+  <div class="storage-text" style="margin-top: 20px">
+    <!-- Add margin-top here -->
+    <h2>Explore Our Unit Options</h2>
+  </div>
+</div>
+<div>
+  <div class="card-container" >
+    <!-- First Card -->
+    <div class="first-card">
+      <div class="card-content">
+        <img
+          src="../assets/images/stora.jpg"
+          alt="Card Image 3"
+          style="width: 100%; height: 200px;border-radius: 2%;"
+        />
+        <!-- Increase max-height -->
+        <h3>Small Storage Unit</h3>
+        <p>
+          <strong>Description: These are small units we offer, on the picture is the biggest on the small units</strong>
+        </p>
+        <p></p>
+        <p><strong> Price: R 1500.00 - R 3000.00</strong></p>
+        <p><strong> Size: 1 m2 upto 9 m2</strong></p>
+        <button class="btn" (click)="fetchRooms()">Book</button>
+      </div>
+    </div>
+    <!-- Second Card -->
+    <div class=" second-card">
+      <div class="card-content">
+        <img src="../assets/images/stora2.jpg" alt="Card Image 3" style="width: 100%; height: 280px; border-radius: 2%;"/>
+        <h3>Medium Storage Unit</h3>
+        <p><strong>Description: These are Medium units we offer, on the picture is the biggest on the Medium units</strong> </p> 
+         <p>   
+         </p>
+        <p><strong> R 1500.00 - R 3000.00</strong> </p>
+        <p> <Strong> Size: 1 m2 upto 9 m2</Strong></p>
+        <button class="btn" (click)="fetchMRooms()">Book</button>
+      </div>
+    </div>
+
+   <!-- Third Card -->
+<div class="third-card">
+  <div class="card-content">
+    <img src="../assets/images/stora3.jpg" alt="Card Image 3" style="width: 100%; height: 350px;border-radius: 2%;"/>
+    <h3>Large Storage Unit</h3>
+    <p><strong>Description: These are Large units we offer, on the picture is the biggest on the Large units</strong> </p>
+    <p>  </p>
+    <p><strong> R 1500.00 - R 3000.00</strong> </p>
+        <p> <Strong> Size: 1 m2 upto 9 m2</Strong></p>
+    <button class="btn" (click)="fetchLRooms()">Book</button>
+  </div>
+</div>
+<div class="head">
+<h2>Available Storage Units</h2>
+</div>
+  <app-available-storage *ngFor="let romm of storageUnitSmall" [rooms]="romm"></app-available-storage>
+
