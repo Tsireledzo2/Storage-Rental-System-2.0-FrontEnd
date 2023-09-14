@@ -9,12 +9,12 @@ export class Vehicle {
     vehicleType: VehicleType;
 
 
-    constructor( numberPlate: string,vehicleMake: string,vehicleColor: string,year: string,vehicleName: string,vehicleType: VehicleType) {
-        this.numberPlate = numberPlate;
-        this.vehicleMake = vehicleMake;
-        this.vehicleColor = vehicleColor;
-        this.year = year;
-        this.vehicleName = vehicleName;
+    constructor(vehicleType: VehicleType) {
+        this.numberPlate = "";
+        this.vehicleMake = "";
+        this.vehicleColor = "";
+        this.year = "";
+        this.vehicleName = "";
         this.vehicleType = vehicleType;
 
     }

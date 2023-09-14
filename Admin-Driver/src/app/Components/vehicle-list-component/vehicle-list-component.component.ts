@@ -9,10 +9,10 @@ import { VehicleType } from 'src/app/models/vehicle-type';
   styleUrls: ['./vehicle-list-component.component.css']
 })
 export class VehicleListComponentComponent {
-  // vehicles: string[] = ['mini truck','Big truck','XXL Truck','normal truck' ];
-
-  vehicle: Vehicle[] = [];
-  
+   vehicle: Vehicle[] = [];
+   
+   newVehicleType: VehicleType = new VehicleType();
+   newVehicle: Vehicle = new Vehicle(this.newVehicleType);
   
   constructor(private dataService: DataService) {}
 
@@ -22,22 +22,26 @@ export class VehicleListComponentComponent {
       console.log(this.vehicle);
     });
   }
-  fetchDrivers() {
+  fetchVehicles() {
     this.dataService.getVehicles().subscribe((data) => {
       this.vehicle = data;
     });
   }
-  addVehicle() {
-    const newVehicleType: VehicleType = {
-      vehicleDescription: 'truck',
-      capacity: '1587',
-      vehiclePrice: '7000.00',
-    };
 
-    const newVehicle: Vehicle = new Vehicle('CA1230', 'Toyota','Black','2022','Camry', newVehicleType);
-    this.dataService.addVehicle(newVehicle).subscribe(() => {
-      //this.fetchVehicles();
+  createVehicle(){
+    this.dataService.addVehicle(this.newVehicle).subscribe(response => {
+      console.log(response);
+      this.addVehicleType
+      this.fetchVehicles()
     });
+  }
+  addVehicleType() {
+    this.newVehicleType.vehicleDescription ="truck";
+    console.log("response:method");
+    this.dataService.addVehicle(this.newVehicle).subscribe(response => {
+      console.log(response)
+    });
+      }
 
 //  deleteVehicle(vehicle: string) {
 //   const index = this.vehicles.indexOf(vehicle);
@@ -45,5 +49,5 @@ export class VehicleListComponentComponent {
 //     this.vehicles.splice(index, 1);
 //   }
 // }
-  }
+ 
 }
