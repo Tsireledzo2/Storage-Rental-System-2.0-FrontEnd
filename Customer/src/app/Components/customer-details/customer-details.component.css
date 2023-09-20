@@ -1,0 +1,97 @@
+
+.container {
+  background-color:hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(246, 243, 243);
+  padding: 50px;
+  max-width: 700px;
+  width: 100%;
+  background-color:whitesmoke;
+
+}
+
+.form-container h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color:black;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="password"],
+textarea
+
+
+{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  
+}
+
+button[type="submit"]:hover {
+  background-color: #0b1118;
+}
+
+
+.form-group.full-width {
+  grid-column: span 2;
+
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
