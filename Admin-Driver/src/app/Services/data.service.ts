@@ -28,8 +28,8 @@ addDriver(driver: Driver): Observable<Driver> {
   return this.http.post<Driver>(`${this.baseUrl}/driver/createDriver`, driver);
 }
 
-deleteDriver(driverId: number): Observable<any> {
-  return this.http.delete(`${this.baseUrl}/driver/deleteDriver/${driverId}`);
+deleteDriver(licenceNumber: string): Observable<any> {
+  return this.http.delete(`${this.baseUrl}/driver/deleteDriver/${licenceNumber}`);
 }
 
 addVehicle(vehicle: Vehicle): Observable<Vehicle> {

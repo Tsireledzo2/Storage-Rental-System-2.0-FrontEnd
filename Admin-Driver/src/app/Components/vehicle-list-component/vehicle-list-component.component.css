@@ -3,12 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Center content vertically on the page */
-  background-color: #f0f0f0; /* Background color for the entire page */
-  font-family: Arial, sans-serif; /* Choose your preferred font */
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
-/* Apply styles to the header */
 .header {
   color: black;
 }
@@ -20,24 +19,22 @@
 }
 .content-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  gap: 30px; /* Adjust the gap between the two columns */
-  background-color: #fff; /* Background color for the content container */
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #fff;
   border-radius: 5px;
   padding: 20px;
 }
 
-/* Apply styles to the vehicle list container (left column) */
 .vehicle-list-container {
-  background-color: #f2f2f2; /* Background color for the list container */
+  background-color: #f2f2f2;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  float: left; /* Float the container to the left */
+  float: left;
   width: 30%;
 }
 
-/* Apply styles to the vehicle boxes */
 .vehicle-box {
   padding: 10px;
   border: 1px solid #ccc;
@@ -45,12 +42,10 @@
   background-color: #f9f9f9;
 }
 
-/* Apply styles to form labels */
 .label-and-input label {
   margin-bottom: 5px;
 }
 
-/* Apply styles to form inputs */
 .label-and-input input {
   width: 100%;
   padding: 8px;
@@ -59,10 +54,9 @@
   margin-bottom: 10px;
 }
 
-/* Apply styles to the "Add Vehicle" button */
 .add-vehicle-button {
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
+  background-color: #007bff;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
