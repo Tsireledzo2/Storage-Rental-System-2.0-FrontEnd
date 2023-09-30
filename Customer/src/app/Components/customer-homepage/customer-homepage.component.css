@@ -1,22 +1,10 @@
 /* home.component.css */
-
-/* Header styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #080808;
-  /* Dark blue-gray background color */
-  color: #fff;
-  padding: 10px 20px;
-  /* Adjust padding as needed */
-  height: 20px;
-  /* Adjust the height as needed */
+.whole {
+  background-image: radial-gradient(#b0fc99,#0bbed6);
 }
 
 .logo img {
   height: 40px;
-  /* Adjust the logo size as needed */
 }
 
 nav ul {
@@ -25,7 +13,6 @@ nav ul {
   margin: 0;
   padding: 0;
   margin-right: 20px;
-  /* Adjust the right margin as needed */
 }
 
 nav ul li {
@@ -38,14 +25,15 @@ a {
   font-weight: bold;
 }
 
-/* Navigation icons */
-i {
-  margin-right: 5px;
-}
-
 /* Add animation to the moving text */
 .move-text {
   animation: moveText 5s linear infinite alternate;
+  
+}
+h1 {
+  color: #01816c;
+  background-color: #75747452;
+  padding: 0.5em;
 }
 
 /* Define the animation keyframes */
@@ -138,11 +126,6 @@ i {
   }
 }
 
-/* home.component.css */
-.content{
-  
-
-}
 
 /* Styles for the advertising section */
 .advertising {
@@ -154,6 +137,10 @@ i {
 }
 
 .ad {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -249,4 +236,15 @@ i {
 .hero {
   animation: changeBackgroundColor 10s infinite;
   /* Adjust the duration as needed */
+}
+
+#ad1 {
+  border-right: 3px solid black;
+  padding-left: 8em;
+}
+
+#ad3 {
+  border-left: 3px solid black;
+  padding-right: 8em;
+  /* margin-left: -50px; */
 }
