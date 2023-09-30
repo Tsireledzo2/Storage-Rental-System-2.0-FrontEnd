@@ -15,6 +15,16 @@ import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
 import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.component';
 import { CustomerLoginComponent } from './Components/customer-login/customer-login.component';
+import { LoginComponent } from './Admin-Driver-Components/login/login.component';
+import { FooterComponent } from './Admin-Driver-Components/footer/footer.component';
+import { DriverHomeComponent } from './Admin-Driver-Components/driver-home/driver-home.component';
+import { CollectionsComponent } from './Admin-Driver-Components/collections/collections.component';
+import { NavbarComponent } from './Admin-Driver-Components/navbar/navbar.component';
+import { BookingsListComponentComponent } from './Admin-Driver-Components/bookings-list-component/bookings-list-component.component';
+import { AdminHomeComponent } from './Admin-Driver-Components/admin-home/admin-home.component';
+import { DriverListComponent } from './Admin-Driver-Components/driver-list/driver-list.component';
+import { VehicleListComponentComponent } from './Admin-Driver-Components/vehicle-list-component/vehicle-list-component.component';
+import { EmployeeHeaderComponent } from './Admin-Driver-Components/employee-header/employee-header.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +39,16 @@ import { CustomerLoginComponent } from './Components/customer-login/customer-log
     AvailableStorageComponent,
     InvoiceEmailComponent,
     CustomerLoginComponent,
+    LoginComponent,
+    FooterComponent,
+    DriverHomeComponent,
+    CollectionsComponent,
+    NavbarComponent,
+    BookingsListComponentComponent,
+    AdminHomeComponent,
+    DriverListComponent,
+    VehicleListComponentComponent,
+    EmployeeHeaderComponent,
   ],
   imports: [
     BrowserModule,
