@@ -15,7 +15,8 @@ export class DriverListComponent {
    showAddEmployeeForm = false;
    newEmployee: Employee = new Employee();
    newDriver : Driver = new Driver(this.newEmployee);
-  
+  //  deleteDriver = true;
+
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -43,12 +44,12 @@ export class DriverListComponent {
       console.log(response)
       
     });
+  }
 
-//  deleteDriver(driver: string) {
-//   const index = this.drivers.indexOf(driver);
-//   if (index !== -1) {
-//     this.drivers.splice(index, 1);
-//   }
-// }
+    deleteDriver(licenceNumber: string) {
+     this.dataService.deleteDriver(licenceNumber).subscribe(response => {
+      this.fetchDrivers()
+     });
+ 
 }
 }
