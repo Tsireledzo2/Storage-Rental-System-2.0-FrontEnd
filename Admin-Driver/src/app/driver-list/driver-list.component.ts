@@ -3,30 +3,25 @@ import { DataService } from '../Services/data.service';
 import { Driver } from '../models/driver';
 import { Employee } from '../models/employee';
 
+
 @Component({
   selector: 'app-driver-list',
   templateUrl: './driver-list.component.html',
-  styleUrls: ['./driver-list.component.css'],
+  styleUrls: ['./driver-list.component.css']
 })
 export class DriverListComponent {
-  driver: Driver[] = [];
-
-  showAddEmployeeForm = false;
-  newEmployee: Employee = new Employee();
-  newDriver: Driver = new Driver(this.newEmployee);
-
-  //  @ViewChild('firstNameInput') firstNameInput: ElementRef;
-  //  clearInputFields() {
-  //   this.firstNameInput.nativeElement.value = '';
-  //  }
+   driver: Driver[] = [];
+   
+   showAddEmployeeForm = false;
+   newEmployee: Employee = new Employee();
+   newDriver : Driver = new Driver(this.newEmployee);
+  //  deleteDriver = true;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getDrivers().subscribe((driver) => {
-      this.driver = driver;
-      console.log(this.driver);
-    });
+    this.fetchDrivers();
+    
   }
 
   fetchDrivers() {
@@ -34,26 +29,27 @@ export class DriverListComponent {
       this.driver = data;
     });
   }
-  createDriver() {
-    this.dataService.addEmployee(this.newEmployee).subscribe((response) => {
-      console.log(response);
-      this.addDriver();
-      this.fetchDrivers();
-    });
+  createDriver(){
+    this.dataService.addEmployee(this.newEmployee).subscribe(response => {
+      console.log(response)
+      this.addDriver()
+      this.fetchDrivers()
+    }
+      );
   }
 
   addDriver() {
-    this.newDriver.job_description = 'Driver';
-    this.dataService.addDriver(this.newDriver).subscribe((response) => {
-      console.log(response);
-      this.fetchDrivers();
+    this.newDriver.job_description = "Driver";
+    this.dataService.addDriver(this.newDriver).subscribe(response => {
+      console.log(response)
+      
     });
-
-    //  deleteDriver(driver: string) {
-    //   const index = this.drivers.indexOf(driver);
-    //   if (index !== -1) {
-    //     this.drivers.splice(index, 1);
-    //   }
-    // }
   }
+
+    deleteDriver(licenceNumber: string) {
+     this.dataService.deleteDriver(licenceNumber).subscribe(response => {
+      this.fetchDrivers()
+     });
+ 
+}
 }

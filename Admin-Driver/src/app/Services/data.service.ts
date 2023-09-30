@@ -5,13 +5,14 @@ import { Driver } from '../models/driver';
 import { Vehicle } from '../models/vehicle';
 import { Booking } from '../models/booking';
 import { Employee } from '../models/employee';
+import { VehicleType } from '../models/vehicle-type';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DataService {
-  private baseUrl = 'http://localhost:8080'; // Replace with your API URL
+  private baseUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
@@ -27,12 +28,12 @@ addDriver(driver: Driver): Observable<Driver> {
   return this.http.post<Driver>(`${this.baseUrl}/driver/createDriver`, driver);
 }
 
-deleteDriver(driverId: number): Observable<any> {
-  return this.http.delete(`${this.baseUrl}/driver/deleteDriver/${driverId}`);
+deleteDriver(licenceNumber: string): Observable<any> {
+  return this.http.delete(`${this.baseUrl}/driver/deleteDriver/${licenceNumber}`);
 }
 
 addVehicle(vehicle: Vehicle): Observable<Vehicle> {
-  return this.http.post<Vehicle>(`${this.baseUrl}/driver/createVehicle`, vehicle);
+  return this.http.post<Vehicle>(`${this.baseUrl}/vehicle/createVehicle`, vehicle);
 }
 
 getBookings(): Observable<Booking[]> {
@@ -42,4 +43,5 @@ getBookings(): Observable<Booking[]> {
 addEmployee(employee: Employee): Observable<Employee>{
   return this.http.post<Employee>(`${this.baseUrl}/createEmployee`, employee);
 }
+
 } 
