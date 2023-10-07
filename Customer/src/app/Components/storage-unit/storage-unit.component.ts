@@ -25,8 +25,8 @@ export class StorageUnitComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.getStorages();
-    //this.fetchRooms();
+    //this.getStorages();
+    this.fetchRooms();
   }
 
   getStorages():void{

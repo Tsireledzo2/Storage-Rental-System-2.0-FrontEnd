@@ -12,23 +12,7 @@
     list-style:none;
     padding: 0;
     width: 15em;
-  }
-  
-  .collections .badge {
     display: flex;
-    font-size: medium;
-    color: white;
-    padding: 0.8em 3.7em 0.8em 3.7em;
-    background-color: #405061;
-    line-height: 2em;
-    margin-right: .8em;
-    border-radius: 4px;
-    position: relative;
-    top: -70px;
-  }
-
-  .collections li:hover {
-    background-color: #486788;
   }
 
   h2 {
@@ -39,25 +23,10 @@
     top: -90px;
   }
 
-  .collections li {
-    /* display: inline-block; */
-    margin-right: 10px;
-    cursor: pointer;
-    font-size: medium;
-    font-weight: bolder;
-    color: white;
-    padding: 0.8em 3.7em 0.8em 3.7em;
-    background-color: #405061;
-    line-height: 2em;
-    margin-right: .8em;
-    border-radius: 4px;
-    position: relative;
-    top: -70px; 
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
   .collections-container {
     display: flex;
     grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 1em; 
+    grid-gap: 1em;
+    justify-content: center;
+    width: 450px; 
   }

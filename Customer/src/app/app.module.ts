@@ -25,6 +25,7 @@ import { AdminHomeComponent } from './Admin-Driver-Components/admin-home/admin-h
 import { DriverListComponent } from './Admin-Driver-Components/driver-list/driver-list.component';
 import { VehicleListComponentComponent } from './Admin-Driver-Components/vehicle-list-component/vehicle-list-component.component';
 import { EmployeeHeaderComponent } from './Admin-Driver-Components/employee-header/employee-header.component';
+import { CollectionsListComponent } from './Admin-Driver-Components/collections-list/collections-list.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { EmployeeHeaderComponent } from './Admin-Driver-Components/employee-head
     DriverListComponent,
     VehicleListComponentComponent,
     EmployeeHeaderComponent,
+    CollectionsListComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,5 @@
+<ul *ngIf="booking">
+  <li routerLink="/collection" (click)="sendDataToAddress()">
+    {{ booking.bookingNumber }}
+  </li>
+</ul>

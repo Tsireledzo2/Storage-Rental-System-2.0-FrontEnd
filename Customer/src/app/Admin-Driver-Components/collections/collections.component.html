@@ -1,6 +1,13 @@
 <button type="button" (click)="goBack()">Back</button>
-<div class="collections">
+<div class="collections" *ngIf="address">
   <h1>Collection Details</h1>
-  <li>{{ location | uppercase }}</li>
-  <button type="button" class="btnTakeCollection">Take Collection</button>
+  <li>
+    {{ address.streetNumber | uppercase }}
+    {{ address.streetName | uppercase }}
+    {{ address.state | uppercase }}
+    {{ address.zipCode | uppercase }}
+  </li>
+  <button type="button" class="btnTakeCollection" (click)="takeCollections()">
+    Take Collection
+  </button>
 </div>

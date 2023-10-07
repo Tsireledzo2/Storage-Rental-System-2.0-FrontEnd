@@ -2,9 +2,10 @@
 <div class="DriverHome">
   <h2>Collections</h2>
   <div class="collections-container">
-    <ul class="collections" *ngFor="let col of booking">
-      <li routerLink="/collection">
-        {{ col.bookingNumber }}
+    <ul class="collections">
+      <li *ngFor="let addressDetails of booking">
+        <app-collections-list 
+        [booking]="addressDetails"></app-collections-list>
       </li>
     </ul>
   </div>
