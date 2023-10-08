@@ -15,6 +15,8 @@ import { AdminHomeComponent } from '../Admin-Driver-Components/admin-home/admin-
 import { DriverListComponent } from '../Admin-Driver-Components/driver-list/driver-list.component';
 import { BookingsListComponentComponent } from '../Admin-Driver-Components/bookings-list-component/bookings-list-component.component';
 import { VehicleListComponentComponent } from '../Admin-Driver-Components/vehicle-list-component/vehicle-list-component.component';
+import { ResetPasswordComponent } from '../reset-password/reset-password.component';
+import { CustomerLoginComponent } from '../customer-login/customer-login.component';
 
 
 const routes: Routes = [
@@ -45,6 +47,12 @@ const routes: Routes = [
   },
   {
     path: 'view-email', component: InvoiceEmailComponent
+  },
+  {
+    path: 'resetPassword', component: ResetPasswordComponent
+  },
+  {
+    path: 'customerLogin', component: CustomerLoginComponent
   },
   //-------------Admin Driver Paths----------------------
   {
