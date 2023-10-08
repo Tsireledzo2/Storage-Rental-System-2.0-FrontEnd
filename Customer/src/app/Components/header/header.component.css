@@ -3,17 +3,13 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #080808;
-    /* Dark blue-gray background color */
     color: #fff;
-    padding: 10px 20px;
-    /* Adjust padding as needed */
+    padding: 20px 20px;
     height: 20px;
-    /* Adjust the height as needed */
   }
   
   .logo img {
-    height: 40px;
-    /* Adjust the logo size as needed */
+    height: 60px;
   }
   
   nav ul {
@@ -22,20 +18,29 @@ header {
     margin: 0;
     padding: 0;
     margin-right: 20px;
-    /* Adjust the right margin as needed */
+    font-size: larger;
   }
   
   nav ul li {
     margin-right: 20px;
+    
   }
   
   a {
     text-decoration: none;
     color: #f8f2f2;
     font-weight: bold;
+    cursor: pointer;
   }
   
-  /* Navigation icons */
-  i {
-    margin-right: 5px;
+  li {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+
+  li:hover {
+    background-color: #444444;
+    
   }

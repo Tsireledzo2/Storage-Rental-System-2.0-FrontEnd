@@ -1,25 +1,32 @@
 <div class="container" id="BookingForm">
-<form #addForm="ngForm" (ngSubmit)="onAddBooking(addForm)">
-  <h2>Booking Form</h2>
-  <input type="text" placeholder="Unit Size" />
-  <input type="text" placeholder="Width" />
-  <input type="text" placeholder="Length" />
-  <div class="Dates">
-    <div id="BookingDate">
-      <label>Booking Date:</label>
-      <input ngModel name="bookingDate" type="date" placeholder="Booking Date" />
+  <form #addForm="ngForm" (ngSubmit)="onAddBooking(addForm)">
+    <h2>Booking Form</h2>
+    <span>Unit Size: {{ unitSize }} m2</span><br /><br /><br />
+    <span>Width :{{ width }} m2</span><br /><br /><br />
+    <span>Length :{{ lenth }} m2</span><br /><br /><br />
+    <span>Price :R {{ price }}</span
+    ><br /><br /><br /><br />
+    <div class="Dates">
+      <div id="BookingDate">
+        <label>Booking Date:</label>
+        <input
+          ngModel
+          name="bookingDate"
+          type="date"
+          placeholder="Booking Date"
+        />
+      </div>
+      <div id="From">
+        <label>From:</label>
+        <input ngModel name="startDate" type="date" placeholder="From" />
+      </div>
+      <div id="To">
+        <label>To:</label>
+        <input ngModel name="endDate" type="date" placeholder="Too" />
+      </div>
     </div>
-    <div  id="From">
-      <label>From:</label>
-      <input ngModel name="startDate" type="date" placeholder="From" />
-    </div>
-    <div id="To">
-      <label>To:</label>
-      <input ngModel name="endDate" type="date" placeholder="Too" />
-    </div>
-  </div>
 
-  <div class="spinner">
+    <!-- <div class="spinner">
     <div>
       <label>Quantity:</label>
     </div>
@@ -35,50 +42,59 @@
       readonly
     />
     <button type="button" class="increment" (click)="incrementQuantity()">+</button>
-  </div>
-  <div class="collection">
-    <label for="collection">Collection:</label>
-    <input
-    ngModel
-    name="collection"
-      type="radio"
-      id="yes"
-      name="collection"
-      value="true"
-      (change)="toggleExtraFields(true)"
-    />
-    <label for="yes">Yes</label>
-    <input
-    ngModel
-    name="collection"
-      type="radio"
-      id="no"
-      name="collection"
-      value="false"
-      (change)="toggleExtraFields(false)"
-    />
-    <label for="no">No</label>
-  </div>
+  </div> -->
+    <div class="collection">
+      <label for="collection">Collection:</label>
+      <input
+        ngModel
+        name="collection"
+        type="radio"
+        id="yes"
+        name="collection"
+        value="true"
+        (change)="toggleExtraFields(true)"
+      />
+      <label for="yes">Yes</label>
+      <input
+        ngModel
+        name="collection"
+        type="radio"
+        id="no"
+        name="collection"
+        value="false"
+        (change)="toggleExtraFields(false)"
+      />
+      <label for="no">No</label>
+    </div>
 
-  <div *ngIf="showExtraFields">
+    <!-- <div *ngIf="showExtraFields">
     <input type="text" placeholder="Street Number" />
     <input type="text" placeholder="Street Name" />
     <input type="text" placeholder="State" />
     <input type="text" placeholder="Zip Code" />
-    <!-- Add more extra fields as needed -->
-  </div>
-  <input  ngModel name="totalAmount" type="text" placeholder="Total" />
-  <label>Total:</label>
-  <div>
-    <button  type="submit" class="btn" id="submit-button">Complete Booking</button>
-  </div>
+     Add more extra fields as needed 
+  </div> -->
+    <label>Total:</label>
+    <input
+      ngModel
+      name="totalAmount"
+      type="text"
+      placeholder="Total"
+      [(ngModel)]="price"
+    />
 
+    <div>
+      <button type="submit" class="btn" id="submit-button">
+        Complete Booking
+      </button>
+    </div>
+  </form>
+  <!-- [disabled]="addForm.invalid" -->
 
-<div *ngFor="let booking of booking">
+  <!-- <div *ngFor="let booking of booking">
   <div>
     {{booking.bookingNumber}}
   </div>
 
-</div>
-</form>
+</div> -->
 </div>

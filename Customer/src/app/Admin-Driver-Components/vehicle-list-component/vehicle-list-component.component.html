@@ -1,0 +1,45 @@
+<div class="page-container">
+    <div class="header">
+      <h3>Vehicle List</h3>
+    </div>
+  
+    <div class="vehicle-list-container">
+      <div class="vehicle-box" *ngFor="let vehicle of vehicle">
+        {{ vehicle.vehicleMake}} {{vehicle.vehicleType.vehicleDescription}} {{vehicle.vehicleName}}
+        <!-- <button (click)="deleteVehicle(vehicle)" class="delete-button">X</button> -->
+      </div>
+    </div>
+    
+    <div class="form-container">
+      <div class="label-and-input">
+        <label for="vehicleMake">Make:</label>
+        <input type="text" id="vehicleMake" [(ngModel)]="newVehicle.vehicleMake" placeholder="">
+      </div>
+      <div class="label-and-input">
+        <label for="vehicleColor">Color:</label>
+        <input type="text" id="vehicleColor" [(ngModel)]="newVehicle.vehicleColor" placeholder="">
+      </div>
+      <div class="label-and-input">
+        <label for="numberPlate">Vehicle Number plate:</label>
+        <input type="text" id="numberPlate" [(ngModel)]="newVehicle.numberPlate" placeholder="">
+      </div>
+      <div class="label-and-input">
+        <label for="vehicleName">Vehicle Name:</label>
+        <input type="text" id="vehicleName" [(ngModel)]="newVehicle.vehicleName" placeholder="">
+      </div>
+      <div class="label-and-input">
+        <label for="year">Year:</label>
+        <input type="text" id="year" [(ngModel)]="newVehicle.year" placeholder="">
+      </div>
+      <div class="label-and-input">
+        <label for="capacity">Capacity:</label>
+        <input type="text" id="capacity" [(ngModel)]="newVehicleType.capacity" placeholder="">
+      </div>
+      <div class="label-and-input">
+        <label for="vehiclePrice">Price:</label>
+        <input type="text" id="vehiclePrice" [(ngModel)]="newVehicleType.vehiclePrice" placeholder="">
+      </div>
+      <div class="add-vehicle-button">
+        <button (click)="createVehicle()">Add Vehicle</button>
+  </div>
+    </div>

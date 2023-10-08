@@ -40,4 +40,11 @@ export class StorageUnitService {
   setData(data: any) {
     this.dataSubject.next(data);
   }
+
+  private dataSubjects = new BehaviorSubject<any>(''); // Initial value is an empty string
+  email$ = this.dataSubjects.asObservable();
+
+  setEmail(data: any) {
+    this.dataSubject.next(data);
+  }
 }

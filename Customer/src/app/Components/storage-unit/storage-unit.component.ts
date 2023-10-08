@@ -15,18 +15,24 @@ export class StorageUnitComponent implements OnInit{
    rooms: string[] = [];
    storageUnitSmall: StorageUnit[] = [];
 
-  constructor(private storageService: StorageUnitService){
+  constructor(private storageService: StorageUnitService){}
 
+   goToTheBottom():void {
+    const targetElement = document.getElementById('scrollTarget');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
+
   ngOnInit(): void {
-    this.getStorages();
-    //this.fetchRooms();
+    //this.getStorages();
+    this.fetchRooms();
   }
 
   getStorages():void{
     this.storageService.fetchStorageUnit("123").subscribe(storageUnit => {
       this.storageUnit = storageUnit
-      console.log(this.storageUnit.unitSizeDescription)
+      console.log(this.storageUnit.unitSizeDescription);
       this.description = this.storageUnit.unitSizeDescription;
       this.price = this.storageUnit.storageUnitType.price;
       this.size = this.storageUnit.storageUnitType.unitSize;
@@ -38,7 +44,7 @@ export class StorageUnitComponent implements OnInit{
       storageUnitSmall => {
         this.storageUnitSmall = storageUnitSmall;
         console.log(this.storageUnitSmall)
-        // You can perform any other logic here after fetching the rooms
+        this.goToTheBottom();
       },
       (error) => {
         console.error('Error fetching rooms:', error);
@@ -51,7 +57,7 @@ export class StorageUnitComponent implements OnInit{
       storageUnitSmall => {
         this.storageUnitSmall = storageUnitSmall;
         console.log(this.storageUnitSmall)
-        // You can perform any other logic here after fetching the rooms
+        this.goToTheBottom();
       },
       (error) => {
         console.error('Error fetching rooms:', error);
@@ -60,11 +66,12 @@ export class StorageUnitComponent implements OnInit{
   }
 
   fetchLRooms() {
+    
     this.storageService.sendLargeRooms().subscribe(
       storageUnitSmall => {
         this.storageUnitSmall = storageUnitSmall;
         console.log(this.storageUnitSmall)
-        // You can perform any other logic here after fetching the rooms
+        this.goToTheBottom();
       },
       (error) => {
         console.error('Error fetching rooms:', error);

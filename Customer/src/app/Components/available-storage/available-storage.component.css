@@ -4,7 +4,6 @@ span {
     cursor: pointer;
     font-size: medium;
     border-radius: 8px;
-   
 }
 
 span:hover{
@@ -17,8 +16,8 @@ li {
     margin-top: 3em;
     margin-bottom: 1em;
     list-style: none;
-    display: flex;
-    margin-right: 5em;
+    display: contents;
+    margin-right: 5em; 
    
 }
 
