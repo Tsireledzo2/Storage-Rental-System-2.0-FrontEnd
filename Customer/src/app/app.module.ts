@@ -14,6 +14,8 @@ import { ViewEmailComponent } from './Components/view-email/view-email.component
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
+import { CustomerLoginComponent } from './customer-login/customer-login.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { AvailableStorageComponent } from './Components/available-storage/availa
     CustomerDetailsComponent,
     BookingComponent,
     AvailableStorageComponent,
-    ViewEmailComponent
+    ViewEmailComponent,
+    CustomerLoginComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

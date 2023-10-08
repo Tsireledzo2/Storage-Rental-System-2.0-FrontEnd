@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="login-box">
+      <h2> Login</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+       
+        <button type="submit" (click)="login()">Login</button>
+      </form>
+      <div class="form-group">
+        <a href="#" class="forgot-password-link" routerLink="/forgotPassword">Forgot Password?</a>
+      </div>
+      <div class="signup-link">
+        Don't have an account? <a routerLink="/signin">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  
