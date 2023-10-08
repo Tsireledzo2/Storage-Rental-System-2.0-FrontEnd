@@ -51,7 +51,7 @@ export class CustomerDetailsComponent {
         console.log('Registration successful');
         alert('Data saved');
         this.clearForm();
-        this.route.navigateByUrl('/signin');
+        this.route.navigateByUrl('/customerLogin');
       },
       (error) => {
         console.error('Registration error');

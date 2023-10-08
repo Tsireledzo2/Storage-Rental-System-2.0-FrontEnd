@@ -30,7 +30,7 @@ export class ResetPasswordComponent {
         (response) => {
           alert('Password reset successful');
           this.clearForm();
-          this.route.navigateByUrl("/signin");
+          this.route.navigateByUrl("/customerLogin");
           
         },
         (error) => {

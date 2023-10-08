@@ -16,7 +16,6 @@ import { AvailableStorageComponent } from './Components/available-storage/availa
 import { CustomerLoginComponent } from './customer-login/customer-login.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.component';
-import { CustomerLoginComponent } from './Components/customer-login/customer-login.component';
 import { LoginComponent } from './Admin-Driver-Components/login/login.component';
 import { FooterComponent } from './Admin-Driver-Components/footer/footer.component';
 import { DriverHomeComponent } from './Admin-Driver-Components/driver-home/driver-home.component';
@@ -41,9 +40,8 @@ import { CollectionsListComponent } from './Admin-Driver-Components/collections-
     CustomerDetailsComponent,
     BookingComponent,
     AvailableStorageComponent,
-    ViewEmailComponent,
     CustomerLoginComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
     InvoiceEmailComponent,
     CustomerLoginComponent,
     LoginComponent,
