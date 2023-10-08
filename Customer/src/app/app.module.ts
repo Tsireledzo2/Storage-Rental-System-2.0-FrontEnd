@@ -13,6 +13,8 @@ import { CustomerDetailsComponent } from './Components/customer-details/customer
 import { HttpClientModule } from '@angular/common/http';
 import { BookingComponent } from './Components/booking/booking.component';
 import { AvailableStorageComponent } from './Components/available-storage/available-storage.component';
+import { CustomerLoginComponent } from './customer-login/customer-login.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { InvoiceEmailComponent } from './Components/invoice-email/invoice-email.component';
 import { CustomerLoginComponent } from './Components/customer-login/customer-login.component';
 import { LoginComponent } from './Admin-Driver-Components/login/login.component';
@@ -27,6 +29,7 @@ import { VehicleListComponentComponent } from './Admin-Driver-Components/vehicle
 import { EmployeeHeaderComponent } from './Admin-Driver-Components/employee-header/employee-header.component';
 import { CollectionsListComponent } from './Admin-Driver-Components/collections-list/collections-list.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +41,9 @@ import { CollectionsListComponent } from './Admin-Driver-Components/collections-
     CustomerDetailsComponent,
     BookingComponent,
     AvailableStorageComponent,
+    ViewEmailComponent,
+    CustomerLoginComponent,
+    ResetPasswordComponent
     InvoiceEmailComponent,
     CustomerLoginComponent,
     LoginComponent,
