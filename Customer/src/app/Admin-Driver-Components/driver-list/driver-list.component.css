@@ -1,0 +1,88 @@
+.page-container {
+    background-color: #144272;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: px;
+    color: white;
+    background-color: #526d82;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .driver-list {
+    background-color: #205295;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    min-height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .driver-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: lightblue;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .driver-box button.delete-button {
+    background-color: #474fc4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .add-driver button {
+    background-color: #121212;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .add-driver button:hover {
+    background-color: #1559a7;
+  }
+  
+  .label-and-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .label-and-input label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-right: 1em;
+  }
+  
+  .label-and-input input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: start;
+    width: 30em;
+  }
+  
