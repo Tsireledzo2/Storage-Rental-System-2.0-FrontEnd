@@ -16,7 +16,13 @@ export class DriverListComponent {
    newEmployee: Employee = new Employee();
    newDriver : Driver = new Driver(this.newEmployee);
   //  deleteDriver = true;
-
+  first_name : string = '';
+  last_name: string = '';
+  employee_number: string= '';
+  email: string= '';
+  password: string= '';
+  licence_number: string= '';
+ 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -34,6 +40,7 @@ export class DriverListComponent {
       console.log(response)
       this.addDriver()
       this.fetchDrivers()
+      this.clearForm()
     }
       );
   }
@@ -44,6 +51,16 @@ export class DriverListComponent {
       console.log(response)
       
     });
+  }
+
+  clearForm(){
+    this.first_name = '';
+    this. last_name = '';
+    this.employee_number= '';
+    this.email = '';
+    this.password = '';
+    this.licence_number ='';
+
   }
 
     deleteDriver(licenceNumber: string) {
