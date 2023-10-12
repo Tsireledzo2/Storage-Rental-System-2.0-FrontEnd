@@ -1,4 +1,4 @@
-<!-- <app-header></app-header> -->
+<app-header></app-header>
 <div class="contact-us">
   <div class="contact-container">
     <img class="“logo”" src="https://i.imgur.com/P4iVJz0.png" />
@@ -24,7 +24,7 @@
           id="name"
           placeholder="Name"
           required
-          [(ngModel)]]="name"
+          [(ngModel)]="name"
           name="name"
           [ngModelOptions]="{ standalone: true }"
         />
@@ -33,13 +33,13 @@
           id="email"
           placeholder="Email"
           required
-          [(ngModel)]]="email"
+          [(ngModel)]="email"
           name="email"
           [ngModelOptions]="{ standalone: true }"
         />
         <textarea
           placeholder="Message"
-          [(ngModel)]]="message"
+          [(ngModel)]="message"
           [ngModelOptions]="{ standalone: true }"
         ></textarea>
 
