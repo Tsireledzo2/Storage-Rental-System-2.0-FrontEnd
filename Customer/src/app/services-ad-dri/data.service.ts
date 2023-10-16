@@ -36,6 +36,9 @@ addVehicle(vehicle: Vehicle): Observable<Vehicle> {
   return this.http.post<Vehicle>(`${this.baseUrl}/vehicle/createVehicle`, vehicle);
 }
 
+// addVehicleType(vehivcleType: string){
+//   return this.http.post<VehicleType>(`${this.baseUrl}/createEmployee`, employee)
+// }
 getBookings(): Observable<Booking[]> {
   return this.http.get<Booking[]>(`${this.baseUrl}/booking/getAll`);
 }

@@ -1,0 +1,10 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 18%;
+}
+
+.background:hover {
+  box-shadow: 0 5px 100px rgba(240, 6, 103, 0.432);
+}

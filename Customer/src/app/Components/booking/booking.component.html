@@ -1,19 +1,22 @@
 <div class="container" id="BookingForm">
   <form #addForm="ngForm" (ngSubmit)="onAddBooking(addForm)">
     <h2>Booking Form</h2>
-    <span>Unit Size: {{ unitSize }} m2</span><br /><br /><br />
-    <span>Width :{{ width }} m2</span><br /><br /><br />
-    <span>Length :{{ lenth }} m2</span><br /><br /><br />
-    <span>Price :R {{ price }}</span
-    ><br /><br /><br /><br />
+    <div class="StorageUnits">  
+      <span>Unit Size Description: {{ unitSizeDescription }}</span>  
+      <span>Unit Size: {{ unitSize }} m2</span>
+      <span>Width: {{ width }} m2</span>
+      <span>Length: {{ length }} m2</span>
+      <span>Height: {{ height }} m2</span>
+      <span>Price: R {{ price }}</span>
+  </div>
+
     <div class="Dates">
       <div id="BookingDate">
         <label>Booking Date:</label>
-        <input
-          ngModel
+        <input class="bookingDateInput"
           name="bookingDate"
-          type="date"
           placeholder="Booking Date"
+          [(ngModel)]="currentDate"
         />
       </div>
       <div id="From">
@@ -67,20 +70,19 @@
       <label for="no">No</label>
     </div>
 
-    <!-- <div *ngIf="showExtraFields">
-    <input type="text" placeholder="Street Number" />
-    <input type="text" placeholder="Street Name" />
-    <input type="text" placeholder="State" />
-    <input type="text" placeholder="Zip Code" />
-     Add more extra fields as needed 
-  </div> -->
-    <label>Total:</label>
+    <div *ngIf="showExtraFields">
+    <input type="text" id="streetNumber" name="streetNumber" placeholder="Street Number" [(ngModel)]="streetNumber"/>
+    <input type="text" id="streetName" name="streetName" placeholder="Street Name" [(ngModel)]="streetName"/>
+    <input type="text" id="state" placeholder="State" name="State" [(ngModel)]="state"/>
+    <input type="text" id="zipCode" placeholder="Zip Code" name="ZipCode" [(ngModel)]="zipCode"/>
+  </div>
+    <label>Total Price:</label>
     <input
       ngModel
       name="totalAmount"
       type="text"
       placeholder="Total"
-      [(ngModel)]="price"
+      [(ngModel)]="totalPrice"
     />
 
     <div>

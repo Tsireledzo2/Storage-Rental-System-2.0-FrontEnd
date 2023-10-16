@@ -11,8 +11,6 @@
       </div>
     </div>
     <div class="add-driver">
-      <button (click)="createDriver()">Add Driver</button>
-
       <div class="label-and-input">
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" #firstNameInput [(ngModel)]="newEmployee.first_name" placeholder="Enter First Name">
@@ -37,5 +35,6 @@
         <label for=" licence_number">Licence Number:</label>
         <input for="text" id="password" [(ngModel)]="newDriver.licence_number" placeholder="Enter Licence Number">
       </div>
+      <button (click)="createDriver()">Add Driver</button>
     </div>
   </div>
