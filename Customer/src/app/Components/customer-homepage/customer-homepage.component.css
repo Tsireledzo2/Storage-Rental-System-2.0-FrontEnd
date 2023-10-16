@@ -1,14 +1,4 @@
 /* home.component.css */
-
-.home {
-  text-align: center;
-  overflow: hidden; /* Hide overflowing content */
-}
-
-/* Header Styles */
-app-header {
-  /* Add your header styles here */
-
 .whole {
   background-image: radial-gradient(#b0fc99,#0bbed6);
 }
@@ -44,62 +34,69 @@ h1 {
   color: #01816c;
   background-color: #75747452;
   padding: 0.5em;
-
 }
 
-/* Hero Section Styles */
+/* Define the animation keyframes */
+@keyframes moveText {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    /* Adjust the distance and direction */
+  }
+}
+
+/* Styles for the hero section */
 .hero {
+  background-image: url('../customer-homepage/css/o.jpg');
   color: #fff;
+  padding: 100px;
+  /* Adjust vertical padding as needed */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Adjust the height to your liking */
-  background-size: cover;
-  background-position: center;
-  transition: background-image 0.5s ease-in-out; /* Smooth background image transition */
 }
 
-.slideshow-text {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.move-text {
-  font-size: 36px;
+.slideshow-text h1 {
+  font-size: 48px;
+  /* Increase the font size */
   margin-bottom: 16px;
   font-weight: bold;
-  color: #fff;
-  animation: fadeIn 1s ease-in-out forwards;
-  opacity: 0;
+  color: black;
+  /* White text color */
 }
 
 .slideshow-text p {
-  font-size: 18px;
+  font-size: 20px;
+  /* Increase the font size */
   margin-bottom: 32px;
-  color: #fff;
-  animation: fadeIn 1s ease-in-out forwards;
-  opacity: 0;
+  color: black;
+  /* White text color */
 }
 
 .btn {
   display: inline-block;
   padding: 16px 32px;
-  background-color: #0B7285;
-  color: #fff;
+  /* Increase padding */
+  /* Slightly darker orange */
+  color: black;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
+  /* Adjust the border-radius */
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #095e6b;
+  background-color: #0B7285;
+  /* Darker orange on hover */
 }
 
-/* Content Section Styles */
+/* Styles for the content section */
 .content {
   padding: 40px;
   text-align: center;
@@ -107,17 +104,16 @@ h1 {
 
 .content h2 {
   font-size: 32px;
+  /* Increase the font size */
   margin-bottom: 16px;
 }
 
 .content p {
   font-size: 18px;
+  /* Increase the font size */
   line-height: 1.6;
   color: #333;
 }
-
-
-/* Advertising Section Styles */
 
 @keyframes moveText {
   0% {
@@ -132,11 +128,12 @@ h1 {
 
 
 /* Styles for the advertising section */
-
 .advertising {
   display: flex;
   justify-content: space-around;
   margin-top: 100px;
+ 
+  /* Adjust vertical padding as needed */
 }
 
 .ad {
@@ -149,15 +146,25 @@ h1 {
 
 .ad i {
   font-size: 36px;
+  /* Adjust icon size */
   color: #ff6600;
+  /* Orange icon color */
 }
 
 .ad p {
   font-size: 16px;
   margin-top: 10px;
+  /* Add spacing between icon and text */
 }
 
-/* Add a pulse animation to the button */
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
 .btn {
   animation: pulse 2s infinite;
 }
@@ -176,10 +183,12 @@ h1 {
   }
 }
 
-/* Add animation to the hero text */
-.move-text {
-  animation: fadeIn 2s ease-in-out forwards;
+.slideshow-text h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: bold;
   opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -192,44 +201,23 @@ h1 {
   }
 }
 
-/* Keyframes for background image animation */
 @keyframes changeBackgroundColor {
-  0% {
-    background-image: url('../customer-homepage/css/o.jpg');
+
+  
+
+  100% {
+    background-image: url('../customer-homepage/css/f.jpg');
   }
-  50% {
+  75% {
     background-image: url('../customer-homepage/css/l.jpg');
   }
-  100% {
+  50% {
     background-image: url('../customer-homepage/css/w.jpg');
   }
 }
 
-/* Apply the background image animation to the hero section */
 .hero {
   animation: changeBackgroundColor 10s infinite;
-
-}
-
-/* Scroll-triggered background change */
-.hero.scroll {
-  background-image: url('../customer-homepage/css/l.jpg');
-}
-
-/* home.component.css */
-/* Your existing CSS styles */
-
-/* Scroll-triggered background change for About Us */
-.hero.scroll-about {
-  background-image: url('../customer-homepage/css/e.jpg');
-}
-
-/* Scroll-triggered background change for Contact Us */
-.hero.scroll-contact {
-  background-image: url('../customer-homepage/css/f.jpg');
-}
-
-  /* Adjust the duration as needed */
 }
 
 #ad1 {
@@ -240,6 +228,4 @@ h1 {
 #ad3 {
   border-left: 3px solid black;
   padding-right: 8em;
-  /* margin-left: -50px; */
 }
-
