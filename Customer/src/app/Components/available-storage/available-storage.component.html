@@ -2,7 +2,7 @@
   <!-- <h1>Available Storage Units</h1> -->
   <ul *ngIf="rooms">
     <li>
-      <span routerLink="/Booking" (click)="sendDataToBooking()"
+      <span routerLink="/customerDetails" (click)="sendDataToBooking()"
         >Size: {{ rooms.unitSizeDescription }} =
         {{ rooms.storageUnitType.unitSize }} m^2</span>
     </li>

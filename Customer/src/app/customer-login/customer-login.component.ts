@@ -71,7 +71,7 @@ export class CustomerLoginComponent {
       } else {
         console.log(this.customer.email);
         alert('Login successful');
-        this.route.navigateByUrl('CustomerHome');
+        this.route.navigateByUrl('Booking');
       }
     });
   }
