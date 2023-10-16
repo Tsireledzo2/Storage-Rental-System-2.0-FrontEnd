@@ -1,65 +1,71 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
-import { Customer } from 'src/app/models/customer';
-import { StorageUnitService } from 'src/app/services/storage-unit.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-details',
   templateUrl: './customer-details.component.html',
   styleUrls: ['./customer-details.component.css']
 })
+export class CustomerDetailsComponent {
+  fullName: string = '';
+  email: string = '';
+  username: string = '';
+  cellphone: string = '';
+  password: string = '';
+  repeatPassword: string = '';
+  agreeToTerms: boolean = false;
 
-export class CustomerDetailsComponent implements OnInit{
-  customer?: Customer;
-data = {
-  firstName:'',
-  surname:'',
-  cellphone:'',
-  email: ''
-};
-
-constructor (private http: HttpClient, private route:Router, private service : StorageUnitService){}
-  ngOnInit(): void {
- //   this.sendDataToBooking();
-  }
+  constructor(private http: HttpClient, private route: Router) { }
 
   onSubmit() {
-
-    this.http.post('http://localhost:8080/customer/saveCustomer', this.data)
-    .subscribe((response: any) =>{
-      this.customer = response
-      console.log(this.customer?.email)
-      console.log('Data saved successfully:', response);
-      alert('Data saved successfully');
-      this.resetForm();
-     // this.sendDataToBooking();
-    // console.log(this.customer.email)
-     // this.service.setEmail(this.customer?.email);
-      this.route.navigateByUrl("/Booking");
-
-    },
-    error=>{
-      console.log('Error while saving the data:', error);
-      alert('Error while saving the data');
-    }
-    );
    
-  
-}
-resetForm(){
-  this.data = {
-    firstName:'',
-    surname:'',
-    cellphone:'',
-    email:''
-  };
-}
+    if (
+      !this.fullName ||
+      !this.email ||
+      !this.cellphone ||
+      !this.password ||
+      !this.repeatPassword ||
+      !this.agreeToTerms
+    ) {
+      alert('Please fill in all required fields');
+      return;
+    }
 
-sendDataToBooking(): void {
-  var StorageUnitId = this.data.email;
-  console.log(StorageUnitId);
-  this.service.setEmail(StorageUnitId);
-}
+    if (this.password !== this.repeatPassword) {
+      alert('Passwords do not match');
+      return;
+    }
+
+    const formData = {
+      fullName: this.fullName,
+      email: this.email,
+      cellphone: this.cellphone,
+      password: this.password,
+      repeatPassword: this.repeatPassword,
+      agreeToTerms: this.agreeToTerms
+    };
+
+    this.http.post('http://localhost:8080/customer/saveCustomer', formData).subscribe(
+      (response) => {
+        console.log('Registration successful');
+        alert('Data saved');
+        this.clearForm();
+        this.route.navigateByUrl('/customerLogin');
+      },
+      (error) => {
+        console.error('Registration error');
+        alert('Error while saving data');
+      }
+    );
+  }
+
+  clearForm() {
+    this.fullName = '';
+    this.email = '';
+    this.cellphone = '';
+    this.password = '';
+    this.repeatPassword = '';
+    this.agreeToTerms = false;
+  }
 }

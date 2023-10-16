@@ -16,7 +16,13 @@ Create a service `ng generate service {service-name}`
 Create a model/domain class `ng generate class {class-name}`
 
 ## After pulling 
-`cd Customer or Admin-Driver` then
+`cd Customer` then
 Make sure to run `npm i` then `npm run build`, this help with building the packages added by other contributor or developer
+
+## New update
+These are for `Admin` and `Driver` only
+-`Admin-Driver-Components`
+-`models-ad-dri` models class come here
+-`services-ad-dri` services comes here
 
 

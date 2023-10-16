@@ -1,23 +1,23 @@
 import { Customer } from "./customer";
 
 export class Booking {
-    bookingNumber: Number;
+    bookingNumber: string;
     bookingDate: Date;
     startDate: Date;
     endDate: Date;
     collection: Boolean;
     totalAmount: Number;
-    customer: Customer;
+    // customer: Customer;
 
     constructor
     (
-    bookingNumber: Number,
+    bookingNumber: string,
     bookingDate: Date,
     startDate: Date,
     endDate: Date,
     collection: Boolean,
     totalAmount: Number,
-    customer:Customer
+    // customer:Customer
     )
     {
         this.bookingNumber =bookingNumber;
@@ -26,7 +26,7 @@ export class Booking {
         this.endDate = endDate;
         this.collection = collection;
         this.totalAmount = totalAmount;
-        this.customer = customer;
+        // this.customer = customer;
     }
 
 }

@@ -1,0 +1,95 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #f0f0f0; */
+  background-color: rgb(228, 235, 238);
+  font-family: Arial, sans-serif;
+}
+h3 {
+  text-align: start;
+}
+.header {
+  color: black;
+}
+.vehicle-list-label {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.vehicle-list-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  float: left;
+  width: 30%;
+  margin-right: 3em;
+}
+
+.form-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin-left: 3em;
+}
+
+.vehicle-box {
+  padding: 30px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.label-and-input label {
+  margin-bottom: 5px;
+}
+
+.label-and-input input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.add-vehicle-button {
+  background-color: #007bff;
+  font-size: medium;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.add-vehicle-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.delete-button:hover {
+  background-color: #d40000;
+}

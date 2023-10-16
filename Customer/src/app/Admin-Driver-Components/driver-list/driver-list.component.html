@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="page-container">
+  
+    <div class="header"><h1>List of Drivers</h1>
+      
+    </div>
+    <div class="driver-list">
+      <div class="driver-box" *ngFor="let driver of driver">
+        {{ driver.employee.last_name }} {{ driver.employee.first_name }}
+     <button class="delete-button" (click)="deleteDriver(driver.licence_number)">X</button>
+      </div>
+    </div>
+    <div class="add-driver">
+      <div class="label-and-input">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" #firstNameInput [(ngModel)]="newEmployee.first_name" placeholder="Enter First Name">
+      </div>
+      <div class="label-and-input">
+        <label for="last_name">Last Name:</label>
+        <input for="text" id="last_name" [(ngModel)]="newEmployee.last_name" placeholder="Enter Last Name">
+      </div>
+      <div class="label-and-input">
+        <label for="employee_number">Employee Number:</label>
+        <input for="text" id="employee_number" [(ngModel)]="newEmployee.employeeNumber" placeholder="Enter employee number">
+      </div>
+        <div class="label-and-input">
+        <label for="email">Email:</label>
+        <input for="text" id="email" [(ngModel)]="newEmployee.email" placeholder="Enter Email">
+      </div>
+        <div class="label-and-input">
+        <label for="password">Password</label>
+        <input for="text" id="password" [(ngModel)]="newEmployee.password" placeholder="Enter Password (first 3 letters of lastname$15)">
+      </div>
+      <div class="label-and-input">
+        <label for=" licence_number">Licence Number:</label>
+        <input for="text" id="password" [(ngModel)]="newDriver.licence_number" placeholder="Enter Licence Number">
+      </div>
+      <button (click)="createDriver()">Add Driver</button>
+    </div>
+  </div>

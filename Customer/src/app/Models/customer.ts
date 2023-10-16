@@ -1,18 +1,21 @@
-import { Address } from "./address";
-
-
 export class Customer {
-    firstName: string;
-    surname: string;
-    email: string;
-    cellphone: string;
- 
 
-    constructor(){
-        this.firstName = "";
-        this.surname = "";
-        this.email = "";
-        this.cellphone = "";
- 
-    }
+
+        fullName: string;
+        email: string;
+        cellphone: string;
+        password: string;
+        agreeToTerms: boolean;
+        
+    
+        constructor(){
+            this.fullName = "";
+            this.email = "";
+            this.cellphone = "";
+            this.password = "";
+            this.agreeToTerms = false;
+     
+        }
+
+    
 }
