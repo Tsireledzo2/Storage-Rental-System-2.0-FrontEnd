@@ -28,8 +28,6 @@ import { VehicleListComponentComponent } from './Admin-Driver-Components/vehicle
 import { EmployeeHeaderComponent } from './Admin-Driver-Components/employee-header/employee-header.component';
 import { CollectionsListComponent } from './Admin-Driver-Components/collections-list/collections-list.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
