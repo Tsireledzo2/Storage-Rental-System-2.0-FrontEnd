@@ -1,5 +1,5 @@
 .page-container {
-  background-color: lightblue;
+  background-color: rgb(228, 235, 238);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,6 @@ h1:hover {
 }
 
 .driver-list {
-  /* background-color: #205295; */
   padding: 20px;
   border-radius: 5px;
   width: 50%;
