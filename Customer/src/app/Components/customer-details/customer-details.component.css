@@ -48,3 +48,8 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+.disabled-button:hover {
+  background-color: #ccc; 
+  cursor: not-allowed; 
+}
+
