@@ -1,1 +1,27 @@
-<p>customer-login works!</p>
+<div class="login-container">
+    <div class="login-box">
+      <h2> Login</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="email" [(ngModel)]]="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]]="password" required>
+        </div>
+       
+        <button type="submit" (click)="login()">Login</button>
+    
+      <div class="form-group">
+        <a href="#" class="forgot-password-link" routerLink="/resetPassword">Forgot Password?</a>
+      </div>
+      <div class="signup-link">
+        Don't have an account? <a routerLink="/customerDetails">Sign Up</a>
+      </div>
+    </form>
+    </div>
+  
+  </div>
+ 
+
