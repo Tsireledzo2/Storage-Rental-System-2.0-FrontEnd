@@ -14,10 +14,9 @@
       <div id="BookingDate">
         <label>Booking Date:</label>
         <input
-          ngModel
           name="bookingDate"
-          type="date"
           placeholder="Booking Date"
+          [(ngModel)]="currentDate"
         />
       </div>
       <div id="From">
@@ -74,16 +73,16 @@
     <div *ngIf="showExtraFields">
     <input type="text" id="streetNumber" name="streetNumber" placeholder="Street Number" [(ngModel)]="streetNumber"/>
     <input type="text" id="streetName" name="streetName" placeholder="Street Name" [(ngModel)]="streetName"/>
-    <input type="text" id="state" name="State" [(ngModel)]="state"/>
-    <input type="text" id="zipCode" name="ZipCode" [(ngModel)]="zipCode"/>
+    <input type="text" id="state" placeholder="State" name="State" [(ngModel)]="state"/>
+    <input type="text" id="zipCode" placeholder="Zip Code" name="ZipCode" [(ngModel)]="zipCode"/>
   </div>
-    <label>Total:</label>
+    <label>Total Price:</label>
     <input
       ngModel
       name="totalAmount"
       type="text"
       placeholder="Total"
-      [(ngModel)]="price"
+      [(ngModel)]="totalPrice"
     />
 
     <div>
