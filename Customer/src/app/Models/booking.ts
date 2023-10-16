@@ -1,28 +1,32 @@
-export interface Booking {
-    bookingNumber: number;
+import { Customer } from "./customer";
+
+export class Booking {
+    bookingNumber: string;
     bookingDate: Date;
     startDate: Date;
     endDate: Date;
-    collection: boolean;
+    collection: Boolean;
     totalAmount: Number;
+    // customer: Customer;
 
-    // constructor
-    // (
-    // bookingNumber: number,
-    // bookingDate: Date,
-    // startDate: Date,
-    // endDate: Date,
-    // collection: boolean,
-    // totalAmount: Number
-    // )
-    // {
-    //     this.bookingNumber =bookingNumber;
-    //     this.bookingDate = bookingDate;
-    //     this.startDate = startDate;
-    //     this.endDate = endDate;
-    //     this.collection = collection;
-    //     this.totalAmount = totalAmount;
-
-    // }
+    constructor
+    (
+    bookingNumber: string,
+    bookingDate: Date,
+    startDate: Date,
+    endDate: Date,
+    collection: Boolean,
+    totalAmount: Number,
+    // customer:Customer
+    )
+    {
+        this.bookingNumber =bookingNumber;
+        this.bookingDate = bookingDate;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.collection = collection;
+        this.totalAmount = totalAmount;
+        // this.customer = customer;
+    }
 
 }

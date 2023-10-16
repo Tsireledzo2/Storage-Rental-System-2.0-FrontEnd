@@ -1,4 +1,5 @@
 /* home.component.css */
+
 .home {
   text-align: center;
   overflow: hidden; /* Hide overflowing content */
@@ -7,6 +8,43 @@
 /* Header Styles */
 app-header {
   /* Add your header styles here */
+
+.whole {
+  background-image: radial-gradient(#b0fc99,#0bbed6);
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f2f2;
+  font-weight: bold;
+}
+
+/* Add animation to the moving text */
+.move-text {
+  animation: moveText 5s linear infinite alternate;
+  
+}
+h1 {
+  color: #01816c;
+  background-color: #75747452;
+  padding: 0.5em;
+
 }
 
 /* Hero Section Styles */
@@ -78,7 +116,23 @@ app-header {
   color: #333;
 }
 
+
 /* Advertising Section Styles */
+
+@keyframes moveText {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    /* Adjust the distance and direction */
+  }
+}
+
+
+/* Styles for the advertising section */
+
 .advertising {
   display: flex;
   justify-content: space-around;
@@ -86,6 +140,10 @@ app-header {
 }
 
 .ad {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -150,6 +208,7 @@ app-header {
 /* Apply the background image animation to the hero section */
 .hero {
   animation: changeBackgroundColor 10s infinite;
+
 }
 
 /* Scroll-triggered background change */
@@ -169,3 +228,18 @@ app-header {
 .hero.scroll-contact {
   background-image: url('../customer-homepage/css/f.jpg');
 }
+
+  /* Adjust the duration as needed */
+}
+
+#ad1 {
+  border-right: 3px solid black;
+  padding-left: 8em;
+}
+
+#ad3 {
+  border-left: 3px solid black;
+  padding-right: 8em;
+  /* margin-left: -50px; */
+}
+
