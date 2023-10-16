@@ -11,44 +11,33 @@ export class ResetPasswordComponent {
   email: string = '';
   password: string = '';
   confirmNewPassword: string = '';
-  errorMessage: string = '';
+  
   constructor(private httpClient: HttpClient,private route: Router) {}
 
   onSubmit() {
-    if (this.password !== this.confirmNewPassword) {
-      this.errorMessage = "Passwords don't match.";
-      return;
-    }
-    const resetData = {
-      email: this.email,
-      password: this.password,
-      
-    };
+    if (this.email && this.password && this.confirmNewPassword) {
+      if (this.password !== this.confirmNewPassword) {
+       alert ("Passwords don't match.");
+      } else {
+        const resetData = {
+          email: this.email,
+          password: this.password
+        };
   
-    this.httpClient.post('http://localhost:8080/customer/update', resetData)
-      .subscribe(
-        (response) => {
-          alert('Password reset successful');
-          this.clearForm();
-          this.route.navigateByUrl("/customerLogin");
-          
-        },
-        (error) => {
-          alert('Password reset failed');
-          
-        }
-      );
-      
-      
-
+        this.httpClient.post('http://localhost:8080/customer/update', resetData)
+          .subscribe(
+            (response) => {
+              alert('Password reset successfully');
+              
+              this.route.navigateByUrl("/customerLogin");
+            },
+            (error) => {
+              alert('Password reset failed');
+            }
+          );
       }
-
-      clearForm() {
-        this.email = '';
-        this.password = '';
-        this.confirmNewPassword = '';
-        
+    } else {
+     alert("All fields are required.");
     }
-
-
+  }
 }
