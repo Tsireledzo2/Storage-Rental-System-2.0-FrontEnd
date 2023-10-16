@@ -13,28 +13,44 @@ export class VehicleListComponentComponent {
    
    newVehicleType: VehicleType = new VehicleType();
    newVehicle: Vehicle = new Vehicle(this.newVehicleType);
+
+   vehicleMake : string = '';
+   vehicleColor : string = '';
+   numberPlate: string = '';
+   vehicleName: string = '';
+   year : string = '';
+   capacity : string = '';
+   vehiclePrice : string = '';
+
   
   constructor(private dataService: DataService) {}
 
+ 
   ngOnInit(): void {
-    this.dataService.getVehicles().subscribe(vehicle => {
-      this.vehicle = vehicle
-      console.log(this.vehicle);
-    });
-  }
-  fetchVehicles() {
+    // need to have a look at this it looks different
+    // this.dataService.getVehicles().subscribe(vehicle => {
+    //   this.vehicle = vehicle
+    //   console.log(this.vehicle);
+    this.fetchVehicleType();
+    }
+  
+  fetchVehicleType() {
     this.dataService.getVehicles().subscribe((data) => {
       this.vehicle = data;
     });
   }
 
-  createVehicle(){
+  createVehicleType(){
     this.dataService.addVehicle(this.newVehicle).subscribe(response => {
       console.log(response);
       this.addVehicleType
-      this.fetchVehicles()
-    });
+      // this.fetchVehicleType()
+      this.clearForm();
+    }
+    );
+    this.fetchVehicleType()
   }
+
   addVehicleType() {
     this.newVehicleType.vehicleDescription ="truck";
     console.log("response:method");
@@ -43,11 +59,15 @@ export class VehicleListComponentComponent {
     });
       }
 
-//  deleteVehicle(vehicle: string) {
-//   const index = this.vehicles.indexOf(vehicle);
-//   if (index !== -1) {
-//     this.vehicles.splice(index, 1);
-//   }
-// }
- 
+      clearForm(){
+        this.vehicleMake = '';
+        this.vehicleColor = '';
+        this.numberPlate = '';
+        this.vehicleName= '';
+        this.year = '';
+        this.capacity= '';
+        this.vehiclePrice = '';
+      }
+
+
 }

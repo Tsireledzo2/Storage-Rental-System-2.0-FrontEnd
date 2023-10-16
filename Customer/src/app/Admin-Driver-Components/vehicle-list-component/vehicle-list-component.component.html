@@ -1,17 +1,15 @@
 <app-navbar></app-navbar>
 <div class="page-container">
-    <div class="header">
-      <h3>Vehicle List</h3>
-    </div>
-  
+   
     <div class="vehicle-list-container">
+      <h3>Vehicle List</h3>
       <div class="vehicle-box" *ngFor="let vehicle of vehicle">
         {{ vehicle.vehicleMake}} {{vehicle.vehicleType.vehicleDescription}} {{vehicle.vehicleName}}
-        <!-- <button (click)="deleteVehicle(vehicle)" class="delete-button">X</button> -->
       </div>
     </div>
     
     <div class="form-container">
+      <h3>Add New Vehicle</h3>
       <div class="label-and-input">
         <label for="vehicleMake">Make:</label>
         <input type="text" id="vehicleMake" [(ngModel)]="newVehicle.vehicleMake" placeholder="">
@@ -40,7 +38,6 @@
         <label for="vehiclePrice">Price:</label>
         <input type="text" id="vehiclePrice" [(ngModel)]="newVehicleType.vehiclePrice" placeholder="">
       </div>
-      <div class="add-vehicle-button">
-        <button (click)="createVehicle()">Add Vehicle</button>
-  </div>
+      <button class="add-vehicle-button" (click)="createVehicleType()">Add Vehicle</button>
+
     </div>

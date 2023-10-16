@@ -10,19 +10,18 @@ import { Employee } from 'src/app/models-ad-dri/employee';
   styleUrls: ['./driver-list.component.css']
 })
 export class DriverListComponent {
-   driver: Driver[] = [];
+  driver: Driver[] = [];
    
-   showAddEmployeeForm = false;
-   newEmployee: Employee = new Employee();
-   newDriver : Driver = new Driver(this.newEmployee);
-  //  deleteDriver = true;
+  showAddEmployeeForm = false;
+  newEmployee: Employee = new Employee();
+  newDriver : Driver = new Driver(this.newEmployee);
   first_name : string = '';
   last_name: string = '';
   employee_number: string= '';
   email: string= '';
   password: string= '';
   licence_number: string= '';
- 
+
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -39,10 +38,10 @@ export class DriverListComponent {
     this.dataService.addEmployee(this.newEmployee).subscribe(response => {
       console.log(response)
       this.addDriver()
-      this.fetchDrivers()
       this.clearForm()
     }
       );
+      this.fetchDrivers();
   }
 
   addDriver() {
