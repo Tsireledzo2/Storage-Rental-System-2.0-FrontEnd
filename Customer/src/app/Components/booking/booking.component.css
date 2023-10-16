@@ -104,6 +104,13 @@ input[type="text"] {
   grid-column: 1 / span 2;
 }
 
+.bookingDateInput {
+  padding: 0.3em;
+  border-radius: 5px;
+  font-size: medium;
+  font-weight: 500;
+}
+
 h2 {
   text-align: center;
 }
