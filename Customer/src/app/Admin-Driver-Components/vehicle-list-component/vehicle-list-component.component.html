@@ -5,7 +5,6 @@
       <h3>Vehicle List</h3>
       <div class="vehicle-box" *ngFor="let vehicle of vehicle">
         {{ vehicle.vehicleMake}} {{vehicle.vehicleType.vehicleDescription}} {{vehicle.vehicleName}}
-        <!-- <button (click)="deleteVehicle(vehicle)" class="delete-button">X</button> -->
       </div>
     </div>
     
@@ -39,7 +38,6 @@
         <label for="vehiclePrice">Price:</label>
         <input type="text" id="vehiclePrice" [(ngModel)]="newVehicleType.vehiclePrice" placeholder="">
       </div>
-      
-        <button class="add-vehicle-button" (click)="createVehicle()">Add Vehicle</button>
+      <button class="add-vehicle-button" (click)="createVehicleType()">Add Vehicle</button>
 
     </div>
