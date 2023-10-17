@@ -8,9 +8,19 @@ import { CustomerHomepageComponent } from '../Components/customer-homepage/custo
 import { AvailableStorageComponent } from '../Components/available-storage/available-storage.component';
 import { CustomerDetailsComponent } from '../Components/customer-details/customer-details.component';
 import { InvoiceEmailComponent } from '../Components/invoice-email/invoice-email.component';
+import { CollectionsComponent } from '../Admin-Driver-Components/collections/collections.component';
+import { DriverHomeComponent } from '../Admin-Driver-Components/driver-home/driver-home.component';
+import { LoginComponent } from '../Admin-Driver-Components/login/login.component';
+import { AdminHomeComponent } from '../Admin-Driver-Components/admin-home/admin-home.component';
+import { DriverListComponent } from '../Admin-Driver-Components/driver-list/driver-list.component';
+import { BookingsListComponentComponent } from '../Admin-Driver-Components/bookings-list-component/bookings-list-component.component';
+import { VehicleListComponentComponent } from '../Admin-Driver-Components/vehicle-list-component/vehicle-list-component.component';
+import { ResetPasswordComponent } from '../reset-password/reset-password.component';
+import { CustomerLoginComponent } from '../customer-login/customer-login.component';
 
 
 const routes: Routes = [
+  //-------------Customer Paths----------------------
   {
     path: 'StorageUnit', component: StorageUnitComponent
   },
@@ -37,7 +47,35 @@ const routes: Routes = [
   },
   {
     path: 'view-email', component: InvoiceEmailComponent
-  }
+  },
+  {
+    path: 'resetPassword', component: ResetPasswordComponent
+  },
+  {
+    path: 'customerLogin', component: CustomerLoginComponent
+  },
+  //-------------Admin Driver Paths----------------------
+  {
+    path: 'collection', component: CollectionsComponent
+  },
+  {
+    path: 'driverHome', component: DriverHomeComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'adminHome', component: AdminHomeComponent
+  },
+  {
+    path: 'driver-list', component: DriverListComponent
+  },
+  {
+    path: 'vehicle-list', component: VehicleListComponentComponent
+  },
+  {
+    path: 'bookings-list', component: BookingsListComponentComponent
+  },
 
 ];
 
