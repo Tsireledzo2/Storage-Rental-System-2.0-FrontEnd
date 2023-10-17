@@ -7,13 +7,17 @@ header {
     color: #fff;
     padding: 10px 20px;
     /* Adjust padding as needed */
-    height: 20px;
+    height: 25px;
     /* Adjust the height as needed */
   }
   
-  .logo img {
-    height: 40px;
+  .logo {
+    height: 5rem;
     /* Adjust the logo size as needed */
+  }
+
+  .logo img {
+    width: 100%;
   }
   
   nav ul {
