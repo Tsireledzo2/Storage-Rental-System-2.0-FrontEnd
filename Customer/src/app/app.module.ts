@@ -42,7 +42,7 @@ import { CollectionsListComponent } from './Admin-Driver-Components/collections-
     CustomerLoginComponent,
     ResetPasswordComponent,
     InvoiceEmailComponent,
-    CustomerLoginComponent,
+
     LoginComponent,
     FooterComponent,
     DriverHomeComponent,
@@ -54,6 +54,7 @@ import { CollectionsListComponent } from './Admin-Driver-Components/collections-
     VehicleListComponentComponent,
     EmployeeHeaderComponent,
     CollectionsListComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -62,6 +63,8 @@ import { CollectionsListComponent } from './Admin-Driver-Components/collections-
     FormsModule,
     HttpClientModule,
     RouterModule,
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent],

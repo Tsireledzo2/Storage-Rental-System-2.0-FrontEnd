@@ -34,6 +34,7 @@ export class BookingComponent implements OnInit {
 
   toggleExtraFields(value: boolean) {
     this.showExtraFields = value;
+    this.totalPrice = value ? this.totalPrice + this.collectionPrice : this.totalPrice - this.collectionPrice;
   }
 
   booking: Booking[] = [];
@@ -47,6 +48,9 @@ export class BookingComponent implements OnInit {
   price: Number = 0;
   email: string = '';
   storageid: string = '';
+  collectionPrice: number = 120;
+  totalPrice: number = 0;
+  currentDate: string = new Date().toISOString().split('T')[0];;
   //
   bookingNumber: string ="";
     bookingDate: Date = new Date();
@@ -109,6 +113,7 @@ export class BookingComponent implements OnInit {
         this.length = storageUnit.storageUnitType.length;
         this.height = storageUnit.storageUnitType.height;
         this.price = storageUnit.storageUnitType.price;
+        this.totalPrice = storageUnit.storageUnitType.price.valueOf();
       });
   }
 

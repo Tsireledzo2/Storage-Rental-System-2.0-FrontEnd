@@ -27,9 +27,10 @@
           <input type="checkbox" id="agreeToTerms" name="agreeToTerms"  [(ngModel)]="agreeToTerms"  required>
           <label for="agreeToTerms">I agree to the terms of use</label>
         </div>
-        <button type="submit" onclick="onsubmit">Sign Up</button>
+        <button type="submit" [disabled]="!agreeToTerms" onclick="onsubmit" [ngClass]="{'disabled-button': !agreeToTerms}">Sign Up</button>
       </form>
       <p>Already have an account? <a routerLink="/customerLogin">Sign In</a></p>
     </div>
+  
   </div>
   

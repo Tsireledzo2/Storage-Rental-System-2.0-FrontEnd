@@ -165,13 +165,8 @@ h1 {
   color: #fff;
 }
 
-/* home.component.css */
-
-/* Add a pulse animation to the button */
 .btn {
-  /* ... Other button styles ... */
   animation: pulse 2s infinite;
-  /* Apply the pulse animation */
 }
 
 @keyframes pulse {
@@ -181,7 +176,6 @@ h1 {
 
   50% {
     transform: scale(1.05);
-    /* Scale up at 50% of the animation */
   }
 
   100% {
@@ -189,17 +183,12 @@ h1 {
   }
 }
 
-/* home.component.css */
-
-/* Add animation to the hero text */
 .slideshow-text h1 {
   font-size: 48px;
   margin-bottom: 16px;
   font-weight: bold;
   opacity: 0;
-  /* Start with zero opacity */
   animation: fadeIn 2s ease-in-out forwards;
-  /* Fade in animation */
 }
 
 @keyframes fadeIn {
@@ -212,9 +201,6 @@ h1 {
   }
 }
 
-/* home.component.css */
-
-/* Keyframes for background color animation */
 @keyframes changeBackgroundColor {
 
   
@@ -230,12 +216,8 @@ h1 {
   }
 }
 
-
-
-/* Apply the background color animation to the hero section */
 .hero {
   animation: changeBackgroundColor 10s infinite;
-  /* Adjust the duration as needed */
 }
 
 #ad1 {
@@ -246,5 +228,4 @@ h1 {
 #ad3 {
   border-left: 3px solid black;
   padding-right: 8em;
-  /* margin-left: -50px; */
 }

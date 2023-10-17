@@ -3,10 +3,10 @@
   <ul>
     <li *ngFor="let invoice of invoices" class="invoice-item">
       <div class="invoice-info">
-        <p><strong>Invoice ID:</strong> {{ invoice.InvoiceNumber }}</p>
+        <p><strong>Invoice ID:</strong> {{ invoice.invoiceNumber }}</p>
         <p><strong>Customer:</strong> {{ invoice.customerName }}</p>
-        <p><strong>Invoice Date:</strong> {{ invoice.invoiceDate }}</p>
-        <p><strong>Amount:</strong> ${{ invoice.amount }}</p>
+        <p><strong>Invoice Date:</strong> {{ invoice.formattedInvoiceDate }}</p>
+        <p><strong>Amount:</strong> ${{ invoice.totalAmount }}</p>
         <div class="email-section">
           <label for="recipientEmail">Recipient's Email Address:</label>
           <input type="email" id="recipientEmail" [(ngModel)]="recipientEmail" />
