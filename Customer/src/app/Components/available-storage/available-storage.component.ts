@@ -10,6 +10,7 @@ import { StorageUnitService } from 'src/app/services/storage-unit.service';
 export class AvailableStorageComponent implements OnInit {
   @Input()
   rooms?: StorageUnit;
+  price: string = " Price: R";
 
   constructor(private storageService: StorageUnitService) {}
   ngOnInit(): void {

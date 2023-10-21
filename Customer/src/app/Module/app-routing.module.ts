@@ -54,6 +54,9 @@ const routes: Routes = [
   {
     path: 'customerLogin', component: CustomerLoginComponent
   },
+  {
+    path: 'invoce', component: InvoiceEmailComponent
+  },
   //-------------Admin Driver Paths----------------------
   {
     path: 'collection', component: CollectionsComponent

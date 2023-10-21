@@ -3,11 +3,15 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
-  margin-right: 20px; /* Adjust the right margin as needed */
+  margin-right: 20px; 
 }
 
 nav ul li {
   margin-right: 20px;
+}
+
+h2 {
+  text-align: center;
 }
 
 a {
@@ -18,33 +22,16 @@ a {
 
 
 
-/* Define the animation keyframes */
-@keyframes moveText {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px); /* Adjust the distance and direction */
-  }
-}
-
-/* Styles for the hero section */
-/* Hero Section Styles */
-
-
-
-
 .move-text {
   font-size: 2rem;
 }
 
-/* Storage Text Styles */
 .storage-text {
   text-align: center;
   margin-top: 20px;
 }
 
-/* Card Styles */
+
 .card-container {
   display: flex;
   justify-content: space-between;
@@ -54,80 +41,41 @@ a {
   margin-top: -50px;
 }
 
-/* .card-container :hover {
-  transform: translate(-8px, -16px)
-  rotate(3deg);
 
-} */
 
 .first-card {
-  width: calc(30% - 20px); 
+  width: calc(30% - 30px); 
   background-color: #fff;
-  /* border: 1px solid #ddd; */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.61);
-  /* margin-bottom: 20px; */
-  /* overflow: hidden; */
   padding: 28px;
-  /* transition: transform 0.2s ease-in-out; */
-  height: fit-content;
-  /* display: flex; */
+  height: max-content;
   flex-wrap: wrap;
-  /* background-image: linear-gradient(85deg,#0bbed6,#b0fc99); */
-  /* flex-direction: column; */
-  /* margin-bottom: 100pt; */
 }
 
-
-
-/* .card-container :hover {
-  transform: translate(-8px, -16px)
-  rotate(3deg);
-
-} */
-.home {
-  /* background-image: radial-gradient(#b0fc99,#028299); */
+p {
+  padding-right: 1em;
+  text-align: left;
 }
+
 .second-card{
   width: calc(30% - 20px); 
   background-color: #fff;
-  /* border: 1px solid #ddd; */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.61);
-  /* margin-bottom: 20px; */
-  /* overflow: hidden; */
   padding: 28px;
-  /* transition: transform 0.2s ease-in-out; */
   height: fit-content;
-  /* display: flex; */
   flex-wrap: wrap;
-  /* opacity: 0.6; */
-  /* background-image: radial-gradient(#b0fc99,#02434e); */
-  /* flex-direction: column; */
-  /* margin-bottom: 100pt; */
-
 }
-
-/* .second-card:hover {
-  opacity: 1;
-} */
 
 .third-card{
   width: calc(30% - 20px); 
   background-color: #fff;
-  /* border: 1px solid #ddd; */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.61);
-  /* margin-bottom: 20px; */
-  /* overflow: hidden; */
   padding: 28px;
-  /* transition: transform 0.2s ease-in-out; */
   height: fit-content;
-  /* display: flex; */
   flex-wrap: wrap;
-  /* background-image: linear-gradient(85deg,#b0fc99,#0bbed6); */
-  /* flex-direction: column; */
-  /* margin-bottom: 100pt; */
 }
 
 .card:hover {
@@ -182,11 +130,10 @@ h3 {
 }
 
 strong {
-  font-weight: bold; /* Make the word "Description" bold */
+  font-weight: bold; 
 }
 
 .head {
-  /* display: flex; */
   text-align: center;
   border: 3px solid black;
   width: 100%;
@@ -206,7 +153,6 @@ strong {
   padding: 50px;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* overflow: scroll; */
 }
 
 .card {
@@ -232,6 +178,11 @@ strong {
 
 .card:hover ~ .card {
   transform: translate(130px);
+}
+
+.pricePar {
+  /* margin-left: 0.5em; */
+  padding-left: 0.2em;
 }
 
 

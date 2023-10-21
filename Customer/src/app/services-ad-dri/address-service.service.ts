@@ -16,7 +16,6 @@ export class AddressServiceService {
     return this.http.get<Address>(url);
   }
 
-  
   private dataSubject = new BehaviorSubject<any>('');
   data$ = this.dataSubject.asObservable();
 

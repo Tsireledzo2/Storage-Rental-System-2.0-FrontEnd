@@ -71,9 +71,9 @@ export class CustomerLoginComponent {
         alert('Incorrect credentials');
         this.clearForm();
       } else {
-        console.log(this.customer.email);
+       // console.log(this.customer.email);
         alert('Login successful');
-        this.route.navigateByUrl('CustomerHome');
+        
       }
     });
   }

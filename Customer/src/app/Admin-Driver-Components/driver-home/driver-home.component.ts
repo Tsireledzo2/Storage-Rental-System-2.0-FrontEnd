@@ -20,6 +20,7 @@ export class DriverHomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    
     this.getCollections();
   }
 

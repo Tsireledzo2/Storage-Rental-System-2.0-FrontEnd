@@ -16,10 +16,12 @@ import { AddressServiceService } from 'src/app/services/address-service.service'
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css'],
 })
+
 export class BookingComponent implements OnInit {
   quantity: number = 1;
   showExtraFields: boolean = false;
 
+  storedData = localStorage.getItem('email');
   incrementQuantity() {
     if (this.quantity < 10) {
       this.quantity++;
@@ -78,8 +80,11 @@ export class BookingComponent implements OnInit {
   ngOnInit() {
     this.getBooking();
     this.getSelectedStorageUnit();
+    console.log("customer login email",this.storedData);
+   
     // this.getCustomerEmail();
   }
+
 
   getBooking(): void {
     this.bookingService.getBooking().subscribe(

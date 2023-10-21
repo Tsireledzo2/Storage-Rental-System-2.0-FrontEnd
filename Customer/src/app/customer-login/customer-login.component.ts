@@ -71,7 +71,10 @@ export class CustomerLoginComponent {
       } else {
         console.log(this.customer.email);
         alert('Login successful');
-        this.route.navigateByUrl('CustomerHome');
+        localStorage.setItem('email', this.customer.email);
+        // var storedData = localStorage.getItem('email');
+        // console.log("Stored email:",storedData);
+        this.route.navigateByUrl('Booking');
       }
     });
   }
