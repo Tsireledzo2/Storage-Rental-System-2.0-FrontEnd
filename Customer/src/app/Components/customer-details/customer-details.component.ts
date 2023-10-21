@@ -49,12 +49,12 @@ export class CustomerDetailsComponent {
     this.http.post('http://localhost:8080/customer/saveCustomer', formData).subscribe(
       (response) => {
         console.log('Registration successful');
-        alert('Data saved');
+        alert('You have successfully signed up!!!');
         this.clearForm();
         this.route.navigateByUrl('/customerLogin');
       },
       (error) => {
-        console.error('Registration error');
+       
         alert('Error while saving data');
       }
     );

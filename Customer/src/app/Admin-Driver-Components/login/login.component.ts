@@ -23,6 +23,11 @@ export class LoginComponent implements OnInit{
   constructor(private authentication : AuthenticationServiceService,private router: Router){}
   
   getEmployeeByEmail():void {
+
+    if (this.email.trim() === '' || this.password.trim() === '') {
+      alert('Email and password cannot be empty!');
+      return;
+    }
     
    this.authentication.fetchUserByEmail(this.email, this.password).subscribe(employee => {
     this.employee = employee;
