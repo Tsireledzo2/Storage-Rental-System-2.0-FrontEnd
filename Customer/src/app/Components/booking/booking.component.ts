@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Address } from 'src/app/models-ad-dri/address';
@@ -10,6 +10,8 @@ import { StorageUnitService } from 'src/app/services/storage-unit.service';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { Router } from '@angular/router';
 import { AddressServiceService } from 'src/app/services/address-service.service';
+import { InvoiceService } from 'src/app/services/invoice.service';
+import { Invoice } from 'src/app/Models/invoice';
 
 @Component({
   selector: 'app-booking',
@@ -20,6 +22,8 @@ import { AddressServiceService } from 'src/app/services/address-service.service'
 export class BookingComponent implements OnInit {
   quantity: number = 1;
   showExtraFields: boolean = false;
+  invoices: any[] = [];
+  recipientEmail: string = '';
 
   storedData = localStorage.getItem('email');
   incrementQuantity() {
@@ -63,26 +67,34 @@ export class BookingComponent implements OnInit {
   //
   public address?: Address;
 
+
   public streetNumber: string = "";
   public streetName: string = "";
   public state: string = "";
   public zipCode: string = "";
-  // bookings: Booking = new Booking(this.bookingNumber,this.bookingDate,this.startDate,this.endDate,this.collection,this.totalAmount);
-  // address: Address = new Address(this.bookings);
+
+  //invoice
+  public invoice?:Invoice;
+  public invoiceNumber: string = "";
+  public  customerName: string= "";
+  public  formattedInvoiceDate: string = "";
+  public  storageUnitInvoice: string = "";
+  //
+ 
 
   constructor(
     private bookingService: BookServiceService,
     private storageService: StorageUnitService,
     private addressService: AddressServiceService,
-    private route: Router
+    private route: Router,
+    private httpClient: HttpClient,
+    private invoiceService: InvoiceService,
   ) {}
 
   ngOnInit() {
     this.getBooking();
     this.getSelectedStorageUnit();
     console.log("customer login email",this.storedData);
-   
-    // this.getCustomerEmail();
   }
 
 
@@ -119,6 +131,19 @@ export class BookingComponent implements OnInit {
         this.height = storageUnit.storageUnitType.height;
         this.price = storageUnit.storageUnitType.price;
         this.totalPrice = storageUnit.storageUnitType.price.valueOf();
+        this.invoice = new Invoice();
+        this.customerName = String(this.storedData);
+        this.invoiceNumber = String(storageUnit.storageUnitType.height);
+        this.storageUnitInvoice = storageUnit.unitSizeDescription;
+        //save
+        this.invoice.invoiceNumber ="1";
+        this.invoice.customerName= String(this.storedData);
+        this.invoice.formattedInvoiceDate = this.currentDate;
+        this.invoice.totalAmount = String(this.totalPrice);
+        this.invoiceService.createInvoice(this.invoice).subscribe(response =>{
+          this.invoice = response;
+          console.log("saved invoice",response);
+        });
       });
   }
 
@@ -128,24 +153,7 @@ export class BookingComponent implements OnInit {
       console.log(address)
     });
   }
-  // address: Address = new Address();
-  //  public customer : Customer = new Customer(this.address);
 
-  //  public createBooking(): void {
-  //   this.bookingService.createBooking(this.book).subscribe(book => {
-  //      this.book = book
-  //      console.log(this.book)
-  //   })
-  //  }
-
-  //  getCustomerEmail(): void {
-  //   this.storageService.email$.subscribe(data => {
-  //      data
-  //      console.log('Received',data)
-  //      this.email = data;
-  //      //this.getStorageUnitById(data)
-  //     });
-  //  }
 
   public onAddBooking(addForm: NgForm): void {
     var bookings: Booking = new Booking(this.bookingNumber,this.bookingDate,this.startDate,this.endDate,this.collection,this.totalAmount);
@@ -166,6 +174,7 @@ export class BookingComponent implements OnInit {
         this.addAddress(this.address)
         console.log(response);
         alert('Booking was successful');
+        this.sendInvoiceByEmail();
         this.route.navigateByUrl('/');
         // this.getBooking();
       },
@@ -187,5 +196,51 @@ export class BookingComponent implements OnInit {
 
     container?.appendChild(button);
     button.click();
+  }
+
+   sendInvoiceByEmail() {
+    this.recipientEmail = String(this.storedData);
+    const recipientEmail = this.recipientEmail;
+
+    const emailBody = this.generateEmailBody();
+
+    this.httpClient.post('http://localhost:8080/api/invoices/sendEmail', null, {
+      params: {
+        recipientEmail: recipientEmail,
+        emailBody: emailBody
+      }
+    }).subscribe(
+      (response) => {
+        console.log('Email sent successfully', response);
+      },
+      (error) => {
+        console.error('Email sending failed', error);
+        console.error('Error message:', error.message);
+        console.error('Status code:', error.status);
+      }
+    );
+  }
+
+  generateEmailBody(): string {
+    let emailContent = '<html><body>';
+    emailContent += '<h1>Storage Unit Booking Invoice</h1>';
+    emailContent += '<table>';
+
+    const min = 100;
+    const max = 9000;
+    const randomNumber = this.invoiceService.generateRandomNumber(min, max);
+
+    emailContent += '<tr><td>Thank you for trusting us with your belongings here is your invoice :)</td></tr>';
+      emailContent += '<tr><td>Invoice ID: ' +randomNumber + '</td></tr>';
+      emailContent += '<tr><td>Customer: ' + this.customerName + '</td></tr>';
+      emailContent += '<tr><td>Storage Unit:' + this.storageUnitInvoice + '</td></tr>';
+      emailContent += '<tr><td>Storage Size:' + this.unitSize + 'm<sup>2</sup>'+'</td></tr>';
+      emailContent += '<tr><td>Collection:' + this.collection + '</td></tr>';
+      emailContent += '<tr><td>Invoice Date: ' + this.currentDate + '</td></tr>';
+      emailContent += '<tr><td>Invoice Amount: R' + this.totalPrice + '</td></tr>';
+    
+    emailContent += '</table></body></html>';
+    console.log("email",emailContent)
+    return emailContent;
   }
 }

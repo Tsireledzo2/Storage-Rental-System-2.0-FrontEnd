@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InvoiceEmailComponent implements OnInit {
   invoices: any[] = [];
-  recipientEmail: string = ''; // Replace with the desired recipient email address
+  recipientEmail: string = ''; 
 
   constructor(private httpClient: HttpClient) { }
 
