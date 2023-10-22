@@ -37,6 +37,7 @@ export class DriverListComponent {
   createDriver(){
     this.dataService.addEmployee(this.newEmployee).subscribe(response => {
       console.log(response)
+      console.log("About to clean")
       this.addDriver()
       this.clearForm()
     }

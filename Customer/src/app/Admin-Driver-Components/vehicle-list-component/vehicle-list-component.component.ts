@@ -27,10 +27,6 @@ export class VehicleListComponentComponent {
 
  
   ngOnInit(): void {
-    // need to have a look at this it looks different
-    // this.dataService.getVehicles().subscribe(vehicle => {
-    //   this.vehicle = vehicle
-    //   console.log(this.vehicle);
     this.fetchVehicleType();
     }
   
@@ -44,7 +40,6 @@ export class VehicleListComponentComponent {
     this.dataService.addVehicle(this.newVehicle).subscribe(response => {
       console.log(response);
       this.addVehicleType
-      // this.fetchVehicleType()
       this.clearForm();
     }
     );
@@ -53,6 +48,7 @@ export class VehicleListComponentComponent {
 
   addVehicleType() {
     this.newVehicleType.vehicleDescription ="truck";
+    console.log("We are here");
     console.log("response:method");
     this.dataService.addVehicle(this.newVehicle).subscribe(response => {
       console.log(response)
