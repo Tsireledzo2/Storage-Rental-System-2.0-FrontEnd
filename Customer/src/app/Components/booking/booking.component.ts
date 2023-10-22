@@ -238,8 +238,11 @@ export class BookingComponent implements OnInit {
       emailContent += '<tr><td>Collection:' + this.collection + '</td></tr>';
       emailContent += '<tr><td>Invoice Date: ' + this.currentDate + '</td></tr>';
       emailContent += '<tr><td>Invoice Amount: R' + this.totalPrice + '</td></tr>';
-    
-    emailContent += '</table></body></html>';
+      
+    emailContent += '</table>';
+    emailContent += '<footer>Thank you for choosing our services. For any inquiries, please contact us at codingcubeteam@gmail.com</footer>';
+    emailContent += '<footer>Copyright © 2023 Lilyz Storage</footer>';
+    '</body></html>';
     console.log("email",emailContent)
     return emailContent;
   }
