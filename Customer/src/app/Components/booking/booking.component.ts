@@ -77,7 +77,7 @@ export class BookingComponent implements OnInit {
   public invoice?:Invoice;
   public invoiceNumber: string = "";
   public  customerName: string= "";
-  public  formattedInvoiceDate: string = "";
+  public  formattedInvoiceDate:Date = new Date();
   public  storageUnitInvoice: string = "";
   //
  
@@ -138,10 +138,10 @@ export class BookingComponent implements OnInit {
         //save
         this.invoice.invoiceNumber ="1";
         this.invoice.customerName= String(this.storedData);
-        this.invoice.formattedInvoiceDate = this.currentDate;
+        this.invoice.formattedInvoiceDate;
         this.invoice.totalAmount = String(this.totalPrice);
+        console.log("saved invoice",this.invoice);
         this.invoiceService.createInvoice(this.invoice).subscribe(response =>{
-          this.invoice = response;
           console.log("saved invoice",response);
         });
       });
