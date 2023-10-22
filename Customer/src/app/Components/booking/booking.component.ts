@@ -136,14 +136,7 @@ export class BookingComponent implements OnInit {
         this.invoiceNumber = String(storageUnit.storageUnitType.height);
         this.storageUnitInvoice = storageUnit.unitSizeDescription;
         //save
-        this.invoice.invoiceNumber ="1";
-        this.invoice.customerName= String(this.storedData);
-        this.invoice.formattedInvoiceDate;
-        this.invoice.totalAmount = String(this.totalPrice);
-        console.log("saved invoice",this.invoice);
-        this.invoiceService.createInvoice(this.invoice).subscribe(response =>{
-          console.log("saved invoice",response);
-        });
+        
       });
   }
 
