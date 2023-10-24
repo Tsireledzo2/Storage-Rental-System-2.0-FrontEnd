@@ -211,9 +211,22 @@ h1 {
   75% {
     background-image: url('../customer-homepage/css/l.jpg');
   }
-  50% {
+  70% {
     background-image: url('../customer-homepage/css/w.jpg');
   }
+  60% {
+    background-image: url('../customer-homepage/css/ch.jpg');
+  }
+  50% {
+    background-image: url('../customer-homepage/css/lit.jpg');
+  }
+  45% {
+    background-image: url('../customer-homepage/css/wis.jpg');
+  }
+  40% {
+    background-image: url('../customer-homepage/css/ar.jpg');
+  }
+  
 }
 
 .hero {
