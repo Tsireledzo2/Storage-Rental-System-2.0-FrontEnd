@@ -65,10 +65,11 @@ export class CollectionsComponent implements OnInit {
         .subscribe((booking) => {
           console.log('Updated', this.booking);
         });
+        this.route.navigateByUrl('/driverHome').then(() => {
+          window.location.reload();
+        });
     });
     alert('Collection taken');
-    this.route.navigateByUrl('/driverHome').then(() => {
-      window.location.reload();
-    });
+    
   }
 }
