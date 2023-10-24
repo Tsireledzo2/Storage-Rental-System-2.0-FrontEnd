@@ -208,24 +208,16 @@ h1 {
   100% {
     background-image: url('../customer-homepage/css/f.jpg');
   }
-  75% {
+  69% {
     background-image: url('../customer-homepage/css/l.jpg');
   }
   70% {
-    background-image: url('../customer-homepage/css/w.jpg');
+    background-image: url('../customer-homepage/css/pp.jpg');
   }
-  60% {
-    background-image: url('../customer-homepage/css/ch.jpg');
+  100% {
+    background-image: url('../customer-homepage/css/storageC.png');
   }
-  50% {
-    background-image: url('../customer-homepage/css/lit.jpg');
-  }
-  45% {
-    background-image: url('../customer-homepage/css/wis.jpg');
-  }
-  40% {
-    background-image: url('../customer-homepage/css/ar.jpg');
-  }
+ 
   
 }
 

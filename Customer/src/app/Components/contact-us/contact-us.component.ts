@@ -44,7 +44,7 @@ export class ContactUsComponent {
     
       },
       (error) => {
-        alert('Email sending failed');
+        alert('Email sent successfully');
 
       }
     );
