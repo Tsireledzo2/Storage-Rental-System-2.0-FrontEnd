@@ -1,4 +1,4 @@
-import { Booking } from "../Models/booking";
+import { Booking } from "../models/booking";
 
 export class Address {
   addressID: string;
