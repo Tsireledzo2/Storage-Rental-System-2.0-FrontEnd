@@ -35,6 +35,7 @@ export class DriverListComponent {
     });
   }
   createDriver(){
+    console.log("create ");
     this.dataService.addEmployee(this.newEmployee).subscribe(response => {
       console.log(response)
       console.log("About to clean")
@@ -47,10 +48,12 @@ export class DriverListComponent {
 
   addDriver() {
     this.newDriver.job_description = "Driver";
+    console.log("about to add driver");
     this.dataService.addDriver(this.newDriver).subscribe(response => {
       console.log(response)
       
     });
+    console.log("driver added");
   }
 
   clearForm(){

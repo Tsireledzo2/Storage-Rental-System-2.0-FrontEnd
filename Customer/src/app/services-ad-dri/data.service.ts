@@ -12,7 +12,7 @@ import { VehicleType } from '../models-ad-dri/vehicle-type';
 })
 
 export class DataService {
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'https://storage-rental-system-2-0.onrender.com';
 
   constructor(private http: HttpClient) { }
 

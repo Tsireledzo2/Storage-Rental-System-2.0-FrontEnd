@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CollectionsService {
 
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'https://storage-rental-system-2-0.onrender.com';
   booking?:Booking;
 
   constructor(private http: HttpClient) {}

@@ -46,7 +46,7 @@ export class CustomerDetailsComponent {
       agreeToTerms: this.agreeToTerms
     };
 
-    this.http.post('http://localhost:8080/customer/saveCustomer', formData).subscribe(
+    this.http.post('https://storage-rental-system-2-0.onrender.com/customer/saveCustomer', formData).subscribe(
       (response) => {
         console.log('Registration successful');
         alert('You have successfully signed up!!!');

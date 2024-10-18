@@ -197,7 +197,7 @@ export class BookingComponent implements OnInit {
 
     const emailBody = this.generateEmailBody();
 
-    this.httpClient.post('http://localhost:8080/api/invoices/sendEmail', null, {
+    this.httpClient.post('https://storage-rental-system-2-0.onrender.com/api/invoices/sendEmail', null, {
       params: {
         recipientEmail: recipientEmail,
         emailBody: emailBody

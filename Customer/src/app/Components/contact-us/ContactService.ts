@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private backendUrl = 'http://localhost:8080/contact/submit'; 
+  private backendUrl = 'https://storage-rental-system-2-0.onrender.com/contact/submit'; 
 
   constructor(private http: HttpClient) {}
 

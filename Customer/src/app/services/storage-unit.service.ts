@@ -8,7 +8,7 @@ import { StorageUnit } from '../models/storage-unit';
 })
 export class StorageUnitService {
 
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'https://storage-rental-system-2-0.onrender.com';
 
   constructor(private http: HttpClient) { }
 

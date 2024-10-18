@@ -17,7 +17,7 @@ export class InvoiceEmailComponent implements OnInit {
   }
 
   loadInvoices() {
-    this.httpClient.get<any[]>('http://localhost:8080/invoice/getAll').subscribe(
+    this.httpClient.get<any[]>('https://storage-rental-system-2-0.onrender.com/invoice/getAll').subscribe(
       (data: any[]) => {
         this.invoices = data;
       },
@@ -35,7 +35,7 @@ export class InvoiceEmailComponent implements OnInit {
     const emailBody = this.generateEmailBody(this.invoices);
 
     // Make an HTTP request to send the email
-    this.httpClient.post('http://localhost:8080/api/invoices/sendEmail', null, {
+    this.httpClient.post('https://storage-rental-system-2-0.onrender.com/api/invoices/sendEmail', null, {
       params: {
         recipientEmail: recipientEmail,
         emailBody: emailBody

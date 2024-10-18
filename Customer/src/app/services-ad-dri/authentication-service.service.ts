@@ -10,7 +10,7 @@ import { Driver } from '../models-ad-dri/driver';
 })
 export class AuthenticationServiceService {
 
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'https://storage-rental-system-2-0.onrender.com';
 
   constructor(private http: HttpClient) {}
 

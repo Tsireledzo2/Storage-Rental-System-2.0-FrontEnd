@@ -14,7 +14,7 @@ import { Customer } from 'src/app/models/customer';
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  private loginUrl = 'http://localhost:8080';
+  private loginUrl = 'https://storage-rental-system-2-0.onrender.com';
 
   private isValidInput(email: string, password: string): boolean {
     return email.trim() !== '' && password.trim() !== '';

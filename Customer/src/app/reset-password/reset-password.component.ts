@@ -24,7 +24,7 @@ export class ResetPasswordComponent {
           password: this.password
         };
   
-        this.httpClient.post('http://localhost:8080/customer/update', resetData)
+        this.httpClient.post('https://storage-rental-system-2-0.onrender.com/customer/update', resetData)
           .subscribe(
             (response) => {
               alert('Password reset successfully');

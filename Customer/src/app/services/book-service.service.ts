@@ -9,7 +9,7 @@ import { StorageUnit } from '../models/storage-unit';
   providedIn: 'root'
 })
 export class BookServiceService {
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'https://storage-rental-system-2-0.onrender.com';
 
 
   constructor(private http: HttpClient) {}
