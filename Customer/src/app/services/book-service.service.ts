@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Booking } from '../models/booking';
-import { StorageUnit } from '../models/storage-unit';
+import { StorageUnit } from 'src/app/models/storage-unit';
 
 
 @Injectable({
