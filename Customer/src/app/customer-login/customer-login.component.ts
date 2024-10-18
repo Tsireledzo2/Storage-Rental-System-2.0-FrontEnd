@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Customer } from 'src/app/models/customer';
+import { Customer } from 'src/app/Models/customer';
 
 
 @Injectable({
