@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddressServiceService {
 
-  private baseUrl = 'http://localhost:8080/address';
+  private baseUrl = 'https://storage-rental-system-2-0.onrender.com/address';
 
   constructor(private http: HttpClient) { }
 
