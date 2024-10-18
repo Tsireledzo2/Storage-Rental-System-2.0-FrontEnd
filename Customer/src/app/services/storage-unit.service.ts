@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { StorageUnit } from '../Models/storage-unit';
+import { StorageUnit } from '../models/storage-unit';
 
 @Injectable({
   providedIn: 'root'

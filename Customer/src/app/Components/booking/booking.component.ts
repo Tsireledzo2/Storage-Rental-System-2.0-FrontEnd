@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Address } from 'src/app/models-ad-dri/address';
 import { Booking } from 'src/app/models/booking';
-import { StorageUnit } from 'src/app/Models/storage-unit';
+import { StorageUnit } from 'src/app/models/storage-unit';
 import { BookServiceService } from 'src/app/services/book-service.service';
 import { StorageUnitService } from 'src/app/services/storage-unit.service';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
 import { Router } from '@angular/router';
 import { AddressServiceService } from 'src/app/services/address-service.service';
 import { InvoiceService } from 'src/app/services/invoice.service';
-import { Invoice } from 'src/app/Models/invoice';
+import { Invoice } from 'src/app/models/invoice';
 
 @Component({
   selector: 'app-booking',

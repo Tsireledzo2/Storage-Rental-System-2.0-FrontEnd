@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { StorageUnit } from 'src/app/Models/storage-unit';
+import { StorageUnit } from 'src/app/models/storage-unit';
 import { StorageUnitService } from 'src/app/services/storage-unit.service';
 
 @Component({
