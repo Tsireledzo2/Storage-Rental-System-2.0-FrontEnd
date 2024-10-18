@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Address } from 'src/app/models-ad-dri/address';
 import { Booking } from 'src/app/models/booking';
-import { Customer } from 'src/app/models/customer';
-import { StorageUnit } from 'src/app/models/storage-unit';
+import { StorageUnit } from 'src/app/Models/storage-unit';
 import { BookServiceService } from 'src/app/services/book-service.service';
 import { StorageUnitService } from 'src/app/services/storage-unit.service';
 import { CustomerDetailsComponent } from '../customer-details/customer-details.component';
@@ -197,7 +196,7 @@ export class BookingComponent implements OnInit {
 
     const emailBody = this.generateEmailBody();
 
-    this.httpClient.post('https://storage-rental-system-2-0.onrender.com/api/invoices/sendEmail', null, {
+    this.httpClient.post('http://localhost:8080/api/invoices/sendEmail', null, {
       params: {
         recipientEmail: recipientEmail,
         emailBody: emailBody

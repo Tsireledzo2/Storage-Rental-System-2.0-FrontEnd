@@ -1,5 +1,3 @@
-import { Customer } from "./customer";
-
 export class Booking {
     bookingNumber: string;
     bookingDate: Date;
